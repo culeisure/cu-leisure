@@ -1,5 +1,8 @@
 /* ── CU Leisure Common JS ── */
 
+/* Block right-click (basic content protection) */
+document.addEventListener('contextmenu', e => e.preventDefault());
+
 /* Intro overlay (index.html, first visit only) */
 (function () {
   const path = location.pathname;
