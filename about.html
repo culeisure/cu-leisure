@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>회사 소개·연혁 | 씨유레저 CU Leisure</title>
+  <link rel="icon" href="assets/logo/cu_favicon.png" type="image/png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f7941d" />
+  <meta property="og:site_name" content="CU Leisure" />
+  <meta property="og:image" content="https://cu-leisure.com/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="2009년 (주)채움지앤엘로 시작해 2019년 (주)씨유레저로 사명 변경. 18년간 금융사고 ZERO, 25만 VIP DB. 레저 자산 기획·분양·운영의 全 과정을 책임진 전문기업입니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="회사 소개 | CU Leisure" />
+  <meta property="og:description" content="2009년 (주)채움지앤엘로 시작해 2019년 (주)씨유레저로 사명 변경. 18년간 금융사고 ZERO, 25만 VIP DB. 롯데·워커힐 등 글로벌 브랜드의 라이프롱 파트너." />
+  <meta property="og:url" content="https://cu-leisure.com/about.html" />
+  <link rel="canonical" href="https://cu-leisure.com/about.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "주식회사 씨유레저",
+    "alternateName": ["CU Leisure", "씨유레저"],
+    "url": "https://cu-leisure.com",
+    "logo": "https://cu-leisure.com/assets/logo/cu_logo.png",
+    "description": "회원권 분양·마케팅 전문 기업. 2009년 (주)채움지앤엘에서 시작해 2019년 (주)씨유레저로 사명 변경. 골프장·리조트·호텔·피트니스 회원권 분양과 컨설팅 분야 국내 최다 프로젝트 수행 이력.",
+    "foundingDate": "2009",
+    "founder": { "@type": "Person", "name": "채수용", "jobTitle": "씨유레저 대표이사" },
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "강남구 봉은사로82길 9-5 2F,3F",
+        "addressLocality": "서울특별시",
+        "addressCountry": "KR"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "북구 관문길 40, 3층",
+        "addressLocality": "울산광역시",
+        "addressCountry": "KR"
+      }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+82-2-449-8221",
+      "email": "chaeumgnl@naver.com",
+      "contactType": "customer service",
+      "areaServed": "KR",
+      "availableLanguage": ["Korean", "ko"]
+    },
+    "knowsAbout": [
+      "회원권 분양",
+      "골프장 회원권",
+      "리조트 회원권",
+      "호텔 피트니스 회원권",
+      "분양 컨설팅",
+      "회원권 마케팅",
+      "법정관리·회생 사업지 정상화"
+    ],
+    "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 18, "description": "평균 경력 18년 이상의 전문가" }
+  }
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="common.css"/>
+  <style>
+    /* ── About 전용 ── */
+    .about-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-intro-img { position: relative; border-radius: 28px; overflow: hidden; min-height: 480px; border: 1px solid var(--line); background: #1a2332; }
+    .about-intro-slide { position: absolute; inset: 0; background: center/cover no-repeat; }
+    .about-intro-slide-1 { background-image: url('assets/images/about/brandstory.webp'); animation: brandSlide1 12s infinite; }
+    .about-intro-slide-2 { background-image: url('assets/images/about/proof.png'); animation: brandSlide2 12s infinite; }
+    @keyframes brandSlide1 { 0%, 40% { opacity: 1; } 50%, 90% { opacity: 0; } 100% { opacity: 1; } }
+    @keyframes brandSlide2 { 0%, 40% { opacity: 0; } 50%, 90% { opacity: 1; } 100% { opacity: 0; } }
+    .about-intro-dots { position: absolute; bottom: 16px; right: 16px; z-index: 2; display: flex; gap: 6px; }
+    .about-intro-dots .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.4); }
+    .about-intro-dots .dot-1 { animation: dot1 12s infinite; }
+    .about-intro-dots .dot-2 { animation: dot2 12s infinite; }
+    @keyframes dot1 { 0%, 45% { background: rgba(255,255,255,.95); } 50%, 95% { background: rgba(255,255,255,.4); } 100% { background: rgba(255,255,255,.95); } }
+    @keyframes dot2 { 0%, 45% { background: rgba(255,255,255,.4); } 50%, 95% { background: rgba(255,255,255,.95); } 100% { background: rgba(255,255,255,.4); } }
+    .about-intro-copy h2 { font-size: clamp(28px,3.5vw,42px); line-height: 1.2; letter-spacing: -.03em; font-weight: 900; margin-bottom: 24px; }
+    .about-intro-copy p { color: var(--muted); font-size: 16px; line-height: 1.85; margin-bottom: 18px; text-wrap: pretty; }
+    .about-intro-copy p:last-child { margin-bottom: 0; }
+    .about-intro-copy strong { color: #f7941d; font-weight: 700; }
+
+    /* CEO */
+    /* CEO 섹션 (컨테이너 기반) */
+    .ceo-section { padding: 60px 0 !important; }
+    .ceo-wrap { display: grid; grid-template-columns: 460px 1fr; gap: 160px; align-items: center; }
+    .ceo-img { border-radius: 20px; overflow: hidden; height: 580px; border: 1px solid var(--line); background: url('assets/images/about/ceo_image.webp') center 20% / cover no-repeat; box-shadow: 0 12px 32px rgba(0,0,0,.08); }
+    .ceo-copy { padding: 0; }
+    .ceo-copy h2 { font-size: clamp(28px,3.4vw,38px); line-height: 1.25; letter-spacing: -.03em; font-weight: 900; margin-bottom: 22px; color: #1a2332; }
+    .ceo-copy p { color: var(--muted); font-size: 15.5px; line-height: 1.85; margin-bottom: 18px; }
+    .ceo-copy p:last-of-type { margin-bottom: 0; }
+    .ceo-pull { background: none !important; border: none !important; border-left: 3px solid #1a2332 !important; border-radius: 0; padding: 4px 0 4px 22px !important; margin: 28px 0 !important; color: #1a2332 !important; font-size: 17px !important; font-weight: 700 !important; line-height: 1.85 !important; }
+    .ceo-closer { color: #1a2332 !important; font-size: 16.5px !important; font-weight: 700 !important; margin-top: 28px !important; }
+    .ceo-sig { margin-top: 44px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,.08); }
+    .ceo-sig-row { display: flex; align-items: center; gap: 0; }
+    .ceo-sig-img { height: 56px; width: auto; max-width: 180px; margin-right: 24px; }
+    .ceo-sig-info { padding-left: 24px; border-left: 1px solid rgba(0,0,0,.12); }
+    .ceo-sig-info strong { display: block; font-size: 17px; font-weight: 800; color: #1a2332; margin-bottom: 4px; letter-spacing: .15em; }
+    .ceo-sig-info span { color: var(--muted); font-size: 13px; }
+    .ceo-tagline { display: block; margin: -10px 0 24px; padding: 0; background: none; color: #1a2332; font-size: 14px; font-weight: 700; letter-spacing: .03em; }
+    @media(max-width:900px){
+      .ceo-pull { padding: 4px 0 4px 12px !important; }
+    }
+
+    /* 히스토리 */
+    .timeline { position: relative; padding-left: 32px; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(180deg, transparent, rgba(0,0,0,.15), rgba(0,0,0,.15), transparent); }
+    .tl-item { position: relative; margin-bottom: 36px; }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-item::before { content: ''; position: absolute; left: -38px; top: 7px; width: 10px; height: 10px; border-radius: 50%; background: #1a2332; border: 2px solid #ffffff; box-shadow: 0 0 0 3px rgba(0,0,0,.08); }
+    .tl-year { font-size: 12px; font-weight: 800; color: #8a96a8; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 6px; }
+    .tl-item h4 { font-size: 17px; font-weight: 800; margin-bottom: 6px; line-height: 1.35; color: #1a2332; }
+    .tl-item p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+
+    /* 조직도 */
+    .org-wrap { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .org-top { display: flex; justify-content: center; margin-bottom: 0; }
+    .org-box { padding: 18px 28px; border-radius: 12px; border: 1px solid rgba(0,0,0,.06); background: #ffffff; text-align: center; min-width: 140px; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+    .org-box.accent { border: 1px solid #1a2332; background: #1a2332; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+    .org-box.accent strong { color: #ffffff; }
+    .org-box.accent span { color: rgba(255,255,255,.7); }
+    .org-box strong { display: block; font-size: 15px; font-weight: 800; color: #1a2332; margin-bottom: 4px; }
+    .org-box span { color: var(--muted); font-size: 12px; }
+    .org-line { width: 1px; height: 40px; background: rgba(0,0,0,.15); margin: 0 auto; }
+    .org-mid { display: flex; justify-content: center; gap: 0; position: relative; width: 100%; }
+    .org-mid::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: calc(100% - 140px); height: 1px; background: rgba(0,0,0,.15); }
+    .org-dept-wrap { display: flex; justify-content: center; gap: 16px; width: 100%; flex-wrap: wrap; }
+    .org-dept { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 120px; max-width: 180px; }
+    .org-dept-line { width: 1px; height: 32px; background: rgba(0,0,0,.15); }
+    .org-dept-box { width: 100%; }
+    .org-dept-box .org-box { width: 100%; }
+    .org-dept-sub { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; width: 100%; }
+    .org-sub-item { padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(0,0,0,.05); background: #ffffff; text-align: center; font-size: 12px; color: var(--muted); box-shadow: 0 2px 6px rgba(0,0,0,.03); }
+
+    @media (max-width:1100px) {
+      .about-intro, .ceo-wrap { grid-template-columns: 1fr; }
+      .about-intro-img { min-height: 320px; }
+      .ceo-img { height: auto; aspect-ratio: 4 / 5; max-height: 600px; }
+      .ceo-wrap { gap: 40px; }
+      .org-dept-wrap { gap: 10px; }
+    }
+    @media (max-width:760px) {
+      .org-mid::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><img src="assets/logo/cu_logo.png" alt="CU Leisure 씨유레저" /></a>
+      <nav class="nav-links">
+        <a href="about.html" class="active">About</a>
+        <a href="solution.html">Solution</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="client.html">Client</a>
+        <a href="insight.html">Insight</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-secondary btn-sm nav-cta" href="contact.html">Contact Us</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 페이지 헤더 -->
+    <section class="page-hero" style="background-image:url('assets/images/hero-pages/about.webp');">
+      <div class="container">
+        <span class="eyebrow">About CU Leisure</span>
+        <h1>레저 자산의 가치를<br>증명해온 18년의 기록</h1>
+        <p>2009년 글로벌 금융위기 속에서 시작해, 18년간 레저 사업의 모든 단계를 직접 수행해온 실행 조직입니다.</p>
+      </div>
+    </section>
+
+    <!-- 브랜드 스토리 -->
+    <section class="section">
+      <div class="container">
+        <div class="about-intro">
+          <div class="about-intro-img">
+            <div class="about-intro-slide about-intro-slide-1"></div>
+            <div class="about-intro-slide about-intro-slide-2"></div>
+            <div class="about-intro-dots"><span class="dot dot-1"></span><span class="dot dot-2"></span></div>
+          </div>
+          <div class="about-intro-copy">
+            <span class="eyebrow">CU LEISURE</span>
+            <h2>(주)채움지앤엘에서<br>(주)씨유레저까지.</h2>
+            <p>2009년 글로벌 금융위기 한가운데에서 <strong>(주)채움지앤엘</strong>이 만들어졌습니다. 시장 조사를 숫자 비교로 끝내고, 분양은 광고로만 풀던 시절. 다르게 일하면 다른 결과가 나오리라 생각했습니다.</p>
+            <p>함양 스카이뷰의 창립 분양, 롯데리조트 부여·속초의 대규모 운영, 호반 호텔 앤 리조트의 회생 전환. 단계가 다른 사업지가 같은 회사의 손에서 진행됐습니다. 인허가 컨설팅도, 영업조직 운영도, 자금 회수도 직접 했습니다.</p>
+            <p>그 시간은 <strong>대행사 명의로 발행된 실적증명서</strong>로 증명됩니다. 같은 프로젝트를 '대행했다'고 말하는 회사는 많지만, 영업사원의 자격이나 판매 대리점으로 참여한 곳은 받을 수 없는 문서입니다. 실제 증명서를 가진 회사는 많지 않습니다.</p>
+            <p>2019년 <strong>(주)채움지앤엘</strong>에서 <strong>(주)씨유레저</strong>로 사명을 바꾼 우리는, 증명이 가능한 회사입니다. 씨유레저만의 일하는 방식으로 만든 18년의 시간이기 때문입니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO 인사말 -->
+    <section class="section ceo-section" style="background:#f8fbff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+      <div class="container">
+        <div class="ceo-wrap">
+          <div class="ceo-img"></div>
+          <div class="ceo-copy">
+            <span class="eyebrow">CEO Message</span>
+            <h2>책임과 성실로 일하는<br>평생 파트너가 되겠습니다.</h2>
+            <span class="ceo-tagline">레저 업계 유일의 All-round Player</span>
+            <p>2009년 글로벌 경제 위기로 많은 골프장과 리조트가 회원 모집에 어려움을 겪고 있을 때, 우리는 그 위기 속에서 회사를 시작했습니다.</p>
+            <p>위기가 기회라는 말 때문이 아닙니다. 시장이 멈춰선 그 자리에서, 레저 사업에 진짜 필요한 것이 무엇인지 우리는 알고 있었기 때문입니다.</p>
+            <p class="ceo-pull">광고로 더 외치기보다 기획으로 다시 묻는 것.<br>노출을 사기보다 실행으로 답하는 것.<br>사업이 완주할 때까지 함께 가는 것.</p>
+            <p>10명의 전문가로 출발한 (주)채움지앤엘은 수많은 프로젝트를 성공으로 이끌었고, 2019년 (주)씨유레저로 새로운 출발을 했습니다. 회사 이름은 바뀌었지만, 일하는 원칙은 한 번도 흔들리지 않았습니다.</p>
+            <p>25만 건의 고객 데이터와 정확한 시장 평가, 그리고 레저 사업 전 과정에 대한 이해. 이 모든 것이 귀사의 사업에 가장 현실적인 답이 되도록 하겠습니다.</p>
+            <p class="ceo-closer">처음부터 끝까지, 완주의 파트너로 함께 가겠습니다.</p>
+            <div class="ceo-sig">
+              <div class="ceo-sig-row">
+                <img class="ceo-sig-img" src="assets/images/about/ceo_signature.webp" alt="채수용 사인" onerror="this.style.display='none'">
+                <div class="ceo-sig-info">
+                  <strong>채 수 용</strong>
+                  <span>(주)씨유레저 대표이사</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 히스토리 -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">History</span>
+            <h2>18년의 기록</h2>
+          </div>
+          <p>위기 속에서 시작해, 위기를 기회로 바꾼 씨유레저의 발자취입니다.</p>
+        </div>
+        <div class="grid-2">
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-year">2009</div>
+              <h4>(주)채움지앤엘 법인 설립</h4>
+              <p>글로벌 금융위기 속, 레저 마케팅 국내 최고를 목표로 10인 전문가 팀 창립.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2009 – 2012</div>
+              <h4>함양 스카이뷰 CC 성공</h4>
+              <p>창립 1차 분양, VIP 특별 주중회원권 모집 완료. 대중제 전환 법정관리 절차 수행.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2011 –</div>
+              <h4>롯데리조트 공식 분양대행사</h4>
+              <p>부여·속초·아트빌라스 분양 대행. 롯데 호텔&리조트 공식 파트너 관계 구축.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2015 – 2019</div>
+              <h4>콘래드 서울호텔 피트니스 클럽</h4>
+              <p>자체 모집 실패 프로젝트 인수 후 전량 완판. 호텔 관리 체제로 성공 전환.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2016 –</div>
+              <h4>워커힐 비스타 호텔 피트니스</h4>
+              <p>7년 이상 지속적인 모집 및 회원 관리 수행 중.</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-year">2018</div>
+              <h4>울산 사무소 개소</h4>
+              <p>전국 네트워크 확장. 지역 밀착 실행 조직 구축.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2018</div>
+              <h4>호반 호텔&리조트 회생 전환</h4>
+              <p>법정관리 사업지 동의서 징구 용역. 3개월 만에 완료, 회생계획안 인가에 기여.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2019</div>
+              <h4>(주)씨유레저로 사명 변경</h4>
+              <p>골프장·리조트 회원권 분양 및 마케팅 전문 법인으로 새 출발.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2020 –</div>
+              <h4>라카이 샌드파인 리조트</h4>
+              <p>샌드파인 GC 주중 혜택 연계 회원모집. 잔여 물량 모집 및 기존 회원 연장 수행.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2022 –</div>
+              <h4>더 시에나 골프 앤 리조트</h4>
+              <p>제주 VVIP 시장. 회원모집 관련 전체 PM, 상품기획부터 영업 조직 운영까지 진행 중.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 조직도 -->
+    <section class="section" style="background:#f8fbff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+      <div class="container">
+        <div class="section-head" style="justify-content:center;text-align:center;flex-direction:column;align-items:center;">
+          <span class="eyebrow">Organization</span>
+          <h2>씨유레저 조직도</h2>
+        </div>
+        <div class="org-wrap">
+          <div class="org-top">
+            <div class="org-box accent">
+              <strong>대표이사</strong>
+              <span>채수용</span>
+            </div>
+          </div>
+          <div class="org-line"></div>
+          <div class="org-top">
+            <div class="org-box">
+              <strong>부사장</strong>
+            </div>
+          </div>
+          <div class="org-line"></div>
+          <div class="org-dept-wrap">
+            <div class="org-dept">
+              <div class="org-dept-line"></div>
+              <div class="org-dept-box">
+                <div class="org-box"><strong>영업부</strong></div>
+              </div>
+              <div class="org-dept-sub">
+                <div class="org-sub-item">외부마케팅팀</div>
+                <div class="org-sub-item">프리랜서 관리</div>
+                <div class="org-sub-item">제휴 회원거래소</div>
+              </div>
+            </div>
+            <div class="org-dept">
+              <div class="org-dept-line"></div>
+              <div class="org-dept-box">
+                <div class="org-box"><strong>전략기획부</strong></div>
+              </div>
+              <div class="org-dept-sub">
+                <div class="org-sub-item">사업성·분양성 평가</div>
+                <div class="org-sub-item">마케팅 전략·광고</div>
+                <div class="org-sub-item">상품기획</div>
+              </div>
+            </div>
+            <div class="org-dept">
+              <div class="org-dept-line"></div>
+              <div class="org-dept-box">
+                <div class="org-box"><strong>골프사업부</strong></div>
+              </div>
+              <div class="org-dept-sub">
+                <div class="org-sub-item">골프 부킹</div>
+                <div class="org-sub-item">국내 골프 패키지</div>
+                <div class="org-sub-item">온라인 골프 판촉</div>
+              </div>
+            </div>
+            <div class="org-dept">
+              <div class="org-dept-line"></div>
+              <div class="org-dept-box">
+                <div class="org-box"><strong>나눔레저</strong></div>
+              </div>
+              <div class="org-dept-sub">
+                <div class="org-sub-item">회원권 거래</div>
+                <div class="org-sub-item">양도·취득세 대행</div>
+                <div class="org-sub-item">법인회원 상담</div>
+              </div>
+            </div>
+            <div class="org-dept">
+              <div class="org-dept-line"></div>
+              <div class="org-dept-box">
+                <div class="org-box"><strong>경영지원</strong></div>
+              </div>
+              <div class="org-dept-sub">
+                <div class="org-sub-item">인사관리</div>
+                <div class="org-sub-item">세무·회계</div>
+                <div class="org-sub-item">계약·수수료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <span class="eyebrow">Portfolio</span>
+            <h2>씨유레저가 일하는 방식이<br>더 궁금하시다면</h2>
+            <p>분양·운영·회생까지 다뤄온 사업 사례를 모았습니다. 우리 사업지에 적용 가능한 패턴이 있는지 먼저 살펴보세요.</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0;">
+            <a class="btn btn-primary" href="portfolio.html">포트폴리오 보기 →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-info-row">
+          <div class="footer-info-item footer-brand">
+            <strong>주식회사 씨유레저</strong>
+            <span>대표 채수용 | 사업자 220-87-89046</span>
+            <span>개인정보관리책임자 이요한</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>본사</strong>
+            <span>서울 강남구 봉은사로82길 9-5 2F,3F</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>영남지사</strong>
+            <span>울산광역시 북구 관문길 40, 3층</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>연락처</strong>
+            <span>02-449-8221</span>
+            <span>chaeumgnl@naver.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-line">
+        <span>© 2026 CU Leisure. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="insight.html">Insight</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>
+
+
+
+

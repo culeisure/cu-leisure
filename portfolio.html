@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>프로젝트 사업 사례·포트폴리오 | 씨유레저 CU Leisure</title>
+  <link rel="icon" href="assets/logo/cu_favicon.png" type="image/png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f7941d" />
+  <meta property="og:site_name" content="CU Leisure" />
+  <meta property="og:image" content="https://cu-leisure.com/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="씨유레저 포트폴리오 — 골프·리조트·피트니스·회생까지 실제 수행한 프로젝트 레퍼런스." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="Portfolio | CU Leisure" />
+  <meta property="og:url" content="https://cu-leisure.com/portfolio.html" />
+  <link rel="canonical" href="https://cu-leisure.com/portfolio.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "씨유레저 포트폴리오",
+    "alternateName": "CU Leisure Portfolio",
+    "description": "골프장·리조트·호텔·피트니스·법정관리 회생까지 씨유레저가 실제 수행한 프로젝트 레퍼런스.",
+    "url": "https://cu-leisure.com/portfolio.html",
+    "inLanguage": "ko-KR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "CU Leisure",
+      "url": "https://cu-leisure.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "주식회사 씨유레저",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cu-leisure.com/assets/logo/cu_logo.png"
+      }
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="common.css"/>
+  <style>
+    /* editorial filter tabs */
+    .filter-bar { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 40px; padding: 16px 0 0; border-bottom: 1px solid rgba(0,0,0,.08); position: sticky; top: 76px; z-index: 30; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); }
+    .filter-btn { padding: 14px 0; margin-bottom: -1px; border: none; border-bottom: 2px solid transparent; border-radius: 0; background: none; color: #8a96a8; font-size: 14px; font-weight: 600; cursor: pointer; transition: .2s; font-family: inherit; letter-spacing: .01em; }
+    .filter-btn:hover { background: none; color: #1a2332; border-color: transparent; }
+    .filter-btn.active { background: none; color: #1a2332; border-color: #1a2332; font-weight: 800; }
+    /* clean card */
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .portfolio-card { overflow: hidden; padding: 0; cursor: pointer; transition: transform .25s, box-shadow .25s; display: block; color: inherit; background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: var(--radius); box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .portfolio-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(0,0,0,.08); border-color: rgba(0,0,0,.12); }
+    .portfolio-image { aspect-ratio: 16 / 9; height: auto; }
+    .portfolio-card .portfolio-tag { display: inline-block; padding: 0; background: none; border: none; font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 12px; }
+    .portfolio-card[data-cat="golf-resort"] .portfolio-tag, .modal-tag.tag-golf-resort { color: #6ba037; }
+    .portfolio-card[data-cat="condo"] .portfolio-tag, .modal-tag.tag-condo { color: #14a59c; }
+    .portfolio-card[data-cat="golf"] .portfolio-tag, .modal-tag.tag-golf { color: #1a5fbc; }
+    .portfolio-card[data-cat="fitness"] .portfolio-tag, .modal-tag.tag-fitness { color: #1a2332; }
+    .portfolio-card[data-cat="recovery"] .portfolio-tag, .modal-tag.tag-recovery { color: #d97700; }
+    .portfolio-card .meta-item { padding: 14px 0 0; margin-top: 14px; background: none; border: none; border-top: 1px solid rgba(0,0,0,.06); border-radius: 0; }
+    .portfolio-card .meta-item strong { display: inline; font-size: 10px; color: #8a96a8; letter-spacing: .15em; text-transform: uppercase; font-weight: 700; margin-right: 10px; }
+    .portfolio-card .meta-item span { display: inline; font-size: 13px; color: var(--muted); font-weight: 600; }
+    /* consulting section */
+    .consulting-section { background: linear-gradient(180deg,#f5f8fc,#edf4fd); padding: 80px 0; }
+    .consulting-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 40px; margin-top: 48px; }
+    .consulting-col h4 { font-size: 13px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(247,148,29,.15); }
+    .consulting-col ul { list-style: none; padding: 0; margin: 0; }
+    .consulting-col ul li { font-size: 13px; color: #5a6b7f; line-height: 1.6; padding: 5px 0; border-bottom: 1px solid rgba(0,0,0,.04); display: flex; gap: 8px; }
+    .consulting-col ul li::before { content: '·'; color: var(--accent); flex-shrink: 0; }
+    /* modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 200; backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 24px; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 0; max-width: 1200px; width: 100%; aspect-ratio: 80 / 27; max-height: 88vh; overflow: hidden; position: relative; box-shadow: 0 32px 80px rgba(0,0,0,.18); animation: modalIn .3s ease-out; display: flex; flex-direction: row; }
+    @keyframes modalIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .modal-hero { flex: 0 0 60%; background: center/cover no-repeat; }
+    .modal-scroll { flex: 1; overflow-y: auto; padding: 40px 44px; }
+    .modal-close { position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,.92); border: 1px solid rgba(0,0,0,.08); border-radius: 999px; color: #1a2332; font-size: 16px; width: 36px; height: 36px; display: grid; place-items: center; cursor: pointer; transition: .2s; font-family: inherit; backdrop-filter: blur(8px); z-index: 5; }
+    .modal-close:hover { background: #fff; color: var(--accent); }
+    .modal-tag { display: block; font-size: 11px; font-weight: 700; color: #8a96a8; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 16px; }
+    .modal h2 { font-size: clamp(24px,3.4vw,30px); font-weight: 900; color: #1a2332; margin: 0 0 14px; line-height: 1.25; letter-spacing: -.02em; }
+    .modal-period { font-size: 14px; color: var(--muted); margin: 0 0 28px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+    .modal-body ul { list-style: none; padding: 0; margin: 0 0 32px; }
+    .modal-body ul li { font-size: 15px; color: #3a4a5e; line-height: 1.7; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,.06); display: flex; gap: 14px; }
+    .modal-body ul li:last-child { border-bottom: none; }
+    .modal-body ul li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #c0c8d4; flex-shrink: 0; margin-top: 11px; }
+    .modal-result { padding-top: 24px; border-top: 2px solid #1a2332; }
+    .modal-result strong { display: block; font-size: 11px; color: #8a96a8; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; }
+    .modal-result p { font-size: 16px; font-weight: 800; color: #1a2332; margin: 0; line-height: 1.6; }
+    @media(max-width:1100px) { .portfolio-grid { grid-template-columns: repeat(2,1fr); } .consulting-grid { grid-template-columns: 1fr; } }
+    @media(max-width:880px) { .modal { flex-direction: column; aspect-ratio: auto; max-height: 92vh; } .modal-hero { flex: 0 0 auto; aspect-ratio: 16 / 9; } .modal-scroll { padding: 36px 32px; } }
+    @media(max-width:760px) { .portfolio-grid { grid-template-columns: 1fr; } .modal-scroll { padding: 28px 24px 32px; } .filter-bar { gap: 20px; } }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><img src="assets/logo/cu_logo.png" alt="CU Leisure 씨유레저" /></a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="solution.html">Solution</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="client.html">Client</a>
+        <a href="insight.html">Insight</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-secondary btn-sm nav-cta" href="contact.html">Contact Us</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" style="background-image:url('assets/images/hero-pages/portfolio.webp');">
+      <div class="container">
+        <span class="eyebrow">Portfolio</span>
+        <h1>대기업이 선택한<br>씨유레저의 성공 레퍼런스</h1>
+        <p>이름만 올린 레퍼런스가 아닙니다. 각 사업지가 처한 한계를 어떻게 돌파했는지 실제 수행 내역으로 보여드립니다.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filter('all',this)">전체</button>
+          <button class="filter-btn" onclick="filter('golf-resort',this)">Golf &amp; Resort</button>
+          <button class="filter-btn" onclick="filter('condo',this)">Condominium · Hotel</button>
+          <button class="filter-btn" onclick="filter('golf',this)">Golf &amp; Membership</button>
+          <button class="filter-btn" onclick="filter('fitness',this)">Fitness</button>
+          <button class="filter-btn" onclick="filter('recovery',this)">Recovery &amp; Etc</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+
+          <!-- 1 -->
+          <div class="portfolio-card" data-cat="golf-resort" onclick="openModal('siena', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/thesiena.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Resort</span>
+              <h3>더 시에나 골프 앤 리조트</h3>
+              <p>제주 서귀포시 전국 64명 영업조직 세팅, 2022·2023년 전국 최대 분양 실적</p>
+              <div class="meta-item"><strong>Period</strong><span>2021년 ~ 현재</span></div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="portfolio-card" data-cat="golf-resort" onclick="openModal('lotte-buyo', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/lotte_buyeo.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Resort</span>
+              <h3>롯데리조트 부여 &amp; 스카이힐 컨트리클럽</h3>
+              <p>충남 부여군 롯데 스카이힐 컨트리클럽 연계 회원모집, 롯데 공식 분양대행사</p>
+              <div class="meta-item"><strong>Period</strong><span>2011년 ~ 2017년</span></div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="portfolio-card" data-cat="recovery" onclick="openModal('hoban', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/Port_hoban.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Recovery &amp; Etc</span>
+              <h3>호반 호텔 앤 리조트</h3>
+              <p>서울 서초구 회생채권자 동의서 징구 용역 3개월 내 징구 완료, 회생계획안 인가 기여</p>
+              <div class="meta-item"><strong>Period</strong><span>2018년 5월 ~ 2018년 8월</span></div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="portfolio-card" data-cat="golf-resort" onclick="openModal('haeundae', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/haundae.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Resort</span>
+              <h3>해운대 비치 골프 앤 리조트</h3>
+              <p>부산 기장군 중국 투자이민 타겟 실패 후 국내 전환으로 프로젝트 성공</p>
+              <div class="meta-item"><strong>Period</strong><span>2017년 6월 ~ 2020년 2월</span></div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="portfolio-card" data-cat="golf-resort" onclick="openModal('serenity', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/serenity.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Resort</span>
+              <h3>세레니티 골프 앤 리조트</h3>
+              <p>구 실크리버 컨트리클럽 즉시 반환 주중회원권 및 특별회원권 분양, 2차 컨설팅 진행 중</p>
+              <div class="meta-item"><strong>Role</strong><span>주중·특별회원권 분양 / 컨설팅</span></div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="portfolio-card" data-cat="golf-resort" onclick="openModal('milyang', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_spark.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Resort</span>
+              <h3>밀양 에스파크 골프 앤 리조트</h3>
+              <p>경남 경남 회원권 거래소 협회 실패 프로젝트를 금전소비대차 방식으로 정상화</p>
+              <div class="meta-item"><strong>Role</strong><span>채권자 모집 / 정상화</span></div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="portfolio-card" data-cat="golf-resort" onclick="openModal('lakai', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/lakai.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Resort</span>
+              <h3>라카이 샌드파인 리조트</h3>
+              <p>경남 통영시 샌드파인GC 주중 혜택 연계 회원모집 및 기존 회원 연장 용역</p>
+              <div class="meta-item"><strong>Period</strong><span>2020년 ~ 현재</span></div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="portfolio-card" data-cat="fitness" onclick="openModal('conrad', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_conrad.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Fitness</span>
+              <h3>콘래드 서울 호텔 피트니스</h3>
+              <p>서울 영등포구 자체 모집 실패 프로젝트 인수 후 전량 모집 성공</p>
+              <div class="meta-item"><strong>Period</strong><span>2015년 3월 ~ 2019년 10월</span></div>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="portfolio-card" data-cat="fitness" onclick="openModal('walkerhill', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_vista.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Fitness</span>
+              <h3>비스타 워커힐 서울 호텔</h3>
+              <p>서울 광진구 강남·여의도·종로 외 권역 고액 피트니스 회원권 모집, 7년+ 지속 수행</p>
+              <div class="meta-item"><strong>Period</strong><span>2016년 ~ 현재</span></div>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="portfolio-card" data-cat="condo" onclick="openModal('lotte-sokcho', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_lotte_sokcho.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Condo · Hotel</span>
+              <h3>롯데리조트 속초</h3>
+              <p>강원 속초시 3개 대행사 중 전체 판매 50% 이상을 CU레저가 수행</p>
+              <div class="meta-item"><strong>Period</strong><span>2016년 6월 ~ 2018년 7월</span></div>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="portfolio-card" data-cat="golf" onclick="openModal('skyview', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_skyview.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>스카이뷰 컨트리클럽 (함양)</h3>
+              <p>경남 함양군 씨유레저 창립 첫 프로젝트 창립 분양 및 법정관리 인력 파견</p>
+              <div class="meta-item"><strong>Period</strong><span>2009년 3월 ~ 2012년 6월</span></div>
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="portfolio-card" data-cat="golf" onclick="openModal('jinju', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_jinju.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>진주 컨트리클럽</h3>
+              <p>경남 진주시 주중회원권·선불카드 상품기획 및 회원권 전환, M&amp;A 컨설팅</p>
+              <div class="meta-item"><strong>Period</strong><span>2013년 5월 ~ 2013년 7월</span></div>
+            </div>
+          </div>
+
+          <!-- 13 -->
+          <div class="portfolio-card" data-cat="golf-resort" onclick="openModal('sn-resort', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_sngolf.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Resort</span>
+              <h3>에스앤 골프리조트</h3>
+              <p>수익형·거주형 상품 구성 및 사전 청약 업무, 사업성 평가 및 분양성 검토</p>
+              <div class="meta-item"><strong>Role</strong><span>상품 구성 / 사전 청약 / 사업성 평가</span></div>
+            </div>
+          </div>
+
+          <!-- 14 -->
+          <div class="portfolio-card" data-cat="golf-resort" onclick="openModal('geojebyu', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_geoje.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Resort</span>
+              <h3>거제뷰 골프 앤 리조트</h3>
+              <p>회원 숙소 겸용 객실 회원모집, 가족호텔 동반자 상품 기획 및 분양</p>
+              <div class="meta-item"><strong>Role</strong><span>회원모집 / 동반자 상품 기획</span></div>
+            </div>
+          </div>
+
+          <!-- 15 -->
+          <div class="portfolio-card" data-cat="golf-resort" onclick="openModal('ocean-beach', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_ocean_beach.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Resort</span>
+              <h3>오션비치 골프 앤 리조트</h3>
+              <p>실패 프로젝트를 수요자 리타겟팅 상품 기획으로 전환, 4개월 내 모집액 달성</p>
+              <div class="meta-item"><strong>Result</strong><span>4개월 만에 시행사 목표 달성</span></div>
+            </div>
+          </div>
+
+          <!-- 16 -->
+          <div class="portfolio-card" data-cat="golf" onclick="openModal('gasan', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_gasan.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>가산 노블리제 컨트리클럽</h3>
+              <p>현 푸른솔GC 회원제 골프장 특별회원 및 주중 회원모집 전담</p>
+              <div class="meta-item"><strong>Role</strong><span>특별회원 및 주중 회원모집</span></div>
+            </div>
+          </div>
+
+          <!-- 17 -->
+          <div class="portfolio-card" data-cat="golf" onclick="openModal('podo', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_podocc.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>포도 컨트리클럽</h3>
+              <p>대중제 골프장 이용권 판매 및 콘도회원권 전환 조건 상품기획</p>
+              <div class="meta-item"><strong>Role</strong><span>이용권 판매 / 상품기획</span></div>
+            </div>
+          </div>
+
+          <!-- 18 -->
+          <div class="portfolio-card" data-cat="golf" onclick="openModal('arista', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_arista.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>아리스타 컨트리클럽</h3>
+              <p>대중제 골프장 이용권 판매 씨유레저 영남권 네트워크 활용</p>
+              <div class="meta-item"><strong>Role</strong><span>이용권 판매</span></div>
+            </div>
+          </div>
+
+          <!-- 19 -->
+          <div class="portfolio-card" data-cat="golf" onclick="openModal('easthill', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_easthill.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>이스트힐 컨트리클럽</h3>
+              <p>대중제 골프장 선불카드 판매</p>
+              <div class="meta-item"><strong>Role</strong><span>선불카드 판매</span></div>
+            </div>
+          </div>
+
+          <!-- 20 -->
+          <div class="portfolio-card" data-cat="golf" onclick="openModal('ezsky', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_easysky.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>이지스카이 컨트리클럽</h3>
+              <p>우선주 모집을 통한 자금 조달 구조 기획 및 투자형 회원 모집</p>
+              <div class="meta-item"><strong>Role</strong><span>우선주 모집</span></div>
+            </div>
+          </div>
+
+          <!-- 21 -->
+          <div class="portfolio-card" data-cat="golf" onclick="openModal('pacific-blue', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_pacific.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>퍼시픽 블루 골프 앤 리조트</h3>
+              <p>일본 오이타현 쿠니사키시 국내 골프장 연계 지역 베이스 해외 회원모집</p>
+              <div class="meta-item"><strong>Period</strong><span>2013년 11월 ~ 2014년 3월</span></div>
+            </div>
+          </div>
+
+          <!-- 22 -->
+          <div class="portfolio-card" data-cat="golf" onclick="openModal('roadland', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_wakayama.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>로드랜드 와카야마 골프장</h3>
+              <p>일본 와카야마현 소재 국내 분양 가능성 검토 및 상품 구조 기획</p>
+              <div class="meta-item"><strong>Role</strong><span>상품기획 및 분양성 검토</span></div>
+            </div>
+          </div>
+
+          <!-- 23 -->
+          <div class="portfolio-card" data-cat="fitness" onclick="openModal('babiang', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_vabien.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Fitness</span>
+              <h3>레지던스 바비앙 피트니스</h3>
+              <p>골프 상품과 연계한 고가 전략 회원모집</p>
+              <div class="meta-item"><strong>Role</strong><span>골프 연계 전략 회원모집</span></div>
+            </div>
+          </div>
+
+          <!-- 24 -->
+          <div class="portfolio-card" data-cat="fitness" onclick="openModal('signiel', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_signiel.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Fitness</span>
+              <h3>롯데 시그니엘 호텔 서울/부산</h3>
+              <p>롯데 시그니엘 호텔 서울·부산 VIP 회원모집 및 관리</p>
+              <div class="meta-item"><strong>Role</strong><span>VIP 회원모집 및 관리</span></div>
+            </div>
+          </div>
+
+          <!-- 25 -->
+          <div class="portfolio-card" data-cat="fitness" onclick="openModal('joimaru', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_golfzone.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Fitness</span>
+              <h3>골프존 조이마루</h3>
+              <p>연회원제 피트니스 회원모집 스크린골프 복합 시설 멤버십 판매</p>
+              <div class="meta-item"><strong>Role</strong><span>연회원제 피트니스 회원모집</span></div>
+            </div>
+          </div>
+
+          <!-- 26 -->
+          <div class="portfolio-card" data-cat="fitness" onclick="openModal('grandjoseon', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_grandjosun.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Fitness</span>
+              <h3>그랜드조선 부산 호텔</h3>
+              <p>그랜드조선 부산 호텔 VIP 회원모집 및 멤버십 관리</p>
+              <div class="meta-item"><strong>Role</strong><span>VIP 회원모집 및 관리</span></div>
+            </div>
+          </div>
+
+          <!-- 28 -->
+          <div class="portfolio-card" data-cat="recovery" onclick="openModal('terrace', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_terrace.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Recovery &amp; Etc</span>
+              <h3>더 테라스호텔</h3>
+              <p>M&amp;A 용역 업무</p>
+              <div class="meta-item"><strong>Role</strong><span>M&amp;A 용역</span></div>
+            </div>
+          </div>
+
+          <!-- 29 -->
+          <div class="portfolio-card" data-cat="recovery" onclick="openModal('banpo', this)">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/port_banpo.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Recovery &amp; Etc</span>
+              <h3>반포 요트 계류장</h3>
+              <p>반포 요트 계류장 매각 용역</p>
+              <div class="meta-item"><strong>Role</strong><span>매각 용역</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 컨설팅 텍스트 섹션 -->
+    <section class="consulting-section">
+      <div class="container">
+        <span class="eyebrow">Consulting Reference</span>
+        <h2 style="font-size:32px;font-weight:900;color:#1a2332;margin:12px 0 8px;">컨설팅 · 검토 레퍼런스</h2>
+        <p style="color:#5a6b7f;font-size:16px;">분양 대행 외 사업성 평가, 상품 기획, 분양성 검토 등 다양한 컨설팅 프로젝트를 수행했습니다.</p>
+        <div class="consulting-grid">
+          <div>
+            <div class="consulting-col">
+              <h4>Golf &amp; Resort</h4>
+              <ul>
+                <li>에스앤리조트 대천 컨설팅 및 사전 마케팅 대행</li>
+                <li>제주 'UTS골프 빌리지' 회원모집 컨설팅 및 분양</li>
+                <li>사천 '타니골프앤리조트 조성사업' 상품기획 및 분양성 검토</li>
+                <li>강원 '남한강컨트리클럽 조성사업' 상품기획 및 분양성 검토</li>
+                <li>홍천 상유리조트 상품기획 및 분양성 검토</li>
+                <li>통영 동원건설 개발부지 상품기획 및 분양성 검토</li>
+                <li>횡성 골프장 개발부지 상품기획 및 분양성 검토</li>
+                <li>영천 골프장 개발부지 상품기획 및 분양성 검토</li>
+                <li>음성 골프장&amp;골프텔 개발부지 상품기획 및 분양성 검토</li>
+                <li>영암 사우스링스 골프텔 개발부지 상품기획 및 분양성 검토</li>
+                <li>세레니티 리조트 삼척 개발부지 상품기획 및 분양성 검토</li>
+                <li>남해 골프앤 리조트 개발부지 상품기획 및 분양성 검토</li>
+                <li>수안보 골프 앤 리조트 개발부지 상품기획 및 분양성 검토</li>
+                <li>문막골프장&amp;골프텔 개발부지 상품기획 및 분양성 검토</li>
+                <li>더시에나 리조트 삼척 상품기획</li>
+                <li>아이위시 컨트리클럽 칠곡 상품기획 및 분양성 검토</li>
+                <li>안산 '아일랜드 컨트리클럽' 상품기획 및 분양성 검토</li>
+                <li>음성 '에버스톤 컨트리클럽' 상품기획 및 분양성 검토</li>
+                <li>충북 '경원힐스 컨트리클럽 조성사업' 상품기획 및 분양성 검토</li>
+                <li>강원 '홍천 골프장 조성사업' 상품기획 및 분양성 검토</li>
+              </ul>
+            </div>
+            <div class="consulting-col" style="margin-top:32px;">
+              <h4>Golf</h4>
+              <ul>
+                <li>사천 '타니 컨트리클럽' 사업성 평가</li>
+                <li>경북 김천 '상뜨르컨트리클럽 조성사업' 분양성 검토 및 주주회원 모집</li>
+                <li>충북 중앙 컨트리클럽 (현, 에머슨) 분양성 검토</li>
+                <li>경기 BA비스타 컨트리클럽 분양성 검토</li>
+                <li>충북 TGC 컨트리클럽, 쌍떼힐 컨트리클럽 분양성 검토</li>
+                <li>가평 크리스탈밸리 컨트리클럽 분양성 검토</li>
+                <li>진천 아트밸리 컨트리클럽 분양성 검토</li>
+                <li>기흥 금강골프랜드 회원모집 컨설팅</li>
+                <li>충북 '단암리골프장사업' 상품기획 및 분양성 검토</li>
+                <li>경북 '청도골프장 조성사업' 상품기획 및 분양성 검토</li>
+                <li>강원 '남한강 컨트리클럽 조성사업' 상품기획 및 분양성 검토</li>
+                <li>경북 '애플밸리 컨트리클럽' 주주모집 컨설팅</li>
+                <li>군위 '세인트웨스튼 컨트리클럽' 상품기획 및 분양성 검토</li>
+                <li>칠곡 '세븐밸리 컨트리클럽' 상품기획 및 분양성 검토</li>
+                <li>경북 '경산 컨트리클럽' 상품기획 및 분양성 검토</li>
+                <li>춘천 '파가니카 컨트리클럽' 상품기획 및 분양성 검토</li>
+                <li>음성 골프장 개발부지 상품기획 및 분양성 검토</li>
+                <li>횡성 골프장 개발부지 상품기획 및 분양성 검토</li>
+                <li>영천 골프장 개발부지 상품기획 및 분양성 검토</li>
+                <li>영천 골프장 부지 매각 용역</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="consulting-col">
+              <h4>Condominium / Hotel</h4>
+              <ul>
+                <li>제주 산방산 탄산온천 리조트 사업성 평가 / 시장조사</li>
+                <li>서울 썬앤문그룹 '라마다호텔&amp;스파' 상품기획 및 분양성 검토</li>
+                <li>이천 썬앤문그룹 '미란다콘도미니엄&amp;스파' 상품기획</li>
+                <li>경남 '가조 종합관광휴양지 조성사업' 상품기획 및 분양성 검토</li>
+                <li>영덕 가족호텔 개발부지 상품기획 및 분양성 검토</li>
+                <li>광주 시그니엘 생활형 숙박시설</li>
+                <li>제주 JW메리어트&amp;올레브 리조트 상품기획 및 분양성 검토</li>
+                <li>울산 타니베이호텔 상품기획 및 분양성 검토</li>
+                <li>이비즈네트웍스 위탁운영 체인 회원권 상품기획 및 분양성 검토</li>
+                <li>죽향산업 복합리조트 개발부지 상품기획 및 분양성 검토</li>
+                <li>강화 엘리야리조트 상품기획 및 분양성 검토</li>
+              </ul>
+            </div>
+            <div class="consulting-col" style="margin-top:32px;">
+              <h4>Fitness</h4>
+              <ul>
+                <li>서울 '르미에이르 스포츠 종로센터' 상품기획 및 영업팀 교육</li>
+                <li>기흥 '파밀리움 스포츠단지 조성사업' 상품기획 및 사전 리서치, 분양성 검토</li>
+                <li>서울 '서울 요트클럽' 상품기획 및 분양성 검토</li>
+                <li>경기 대부도 '베르아델 승마클럽' 회원모집 컨설팅 및 분양</li>
+                <li>라마다 스위츠 거제호텔 상품기획 및 회원모집</li>
+                <li>노보텔 엠버서더 대구 피트니스 상품기획 및 회원모집</li>
+                <li>판교 '바이힐튼 호텔 피트니스' 상품기획 및 분양성 검토</li>
+                <li>골프존 조이마루 추가 회원모집 상품기획 및 분양성 검토</li>
+                <li>경주 더테라스호텔 피트니스 상품기획 및 분양성 검토</li>
+                <li>부산 그랜드 윈덤 피트니스 상품기획 및 분양성 검토</li>
+                <li>대구 군위수서골프앤리조트 컨설팅 계약</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <span class="eyebrow">Proof</span>
+            <h2>씨유레저가 직접 발급받은<br>실적증명서를 확인하세요.</h2>
+            <p>시행사가 직접 발급한 분양 실적 증빙. 말이 아닌 서면으로 검증할 수 있습니다.</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0;">
+            <a class="btn btn-primary" href="posts/post-agency-selection.html">실적증명서 보기 →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-info-row">
+          <div class="footer-info-item footer-brand">
+            <strong>주식회사 씨유레저</strong>
+            <span>대표 채수용 | 사업자 220-87-89046</span>
+            <span>개인정보관리책임자 이요한</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>본사</strong>
+            <span>서울 강남구 봉은사로82길 9-5 2F,3F</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>영남지사</strong>
+            <span>울산광역시 북구 관문길 40, 3층</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>연락처</strong>
+            <span>02-449-8221</span>
+            <span>chaeumgnl@naver.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-line">
+        <span>© 2026 CU Leisure. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="insight.html">Insight</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modalOverlay" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="forceClose()">✕</button>
+      <div id="modalHero" class="modal-hero"></div>
+      <div class="modal-scroll">
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filter(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.portfolio-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+      });
+    }
+
+    const data = {
+      'siena': {
+        tag:'Golf & Resort', title:'더 시에나 골프 앤 리조트',
+        period:'2021년 ~ 현재', location:'제주 서귀포시 (리조트) · 제주시 (골프장)',
+        items:['회원모집 관련 전체 PM 수행','상품기획, 광고집행, 회원관리 업무 진행','영업조직 셋팅 및 청약 / 본 분양 진행','전국 영업조직 64명 세팅 (서울 본사 21명 외 대전·전북 12명, 부산 20명, 울산 11명)','풀빌라 중심 CG작업 고급화 및 고품질 브로셔 제작 배포','심플한 2종 상품기획: 골프장 및 콘도혜택 (기명, 무기명)','원거리 고객 특화 혜택: 연 20팀, 주중·주말 구분없이 1일 2팀 사용'],
+        result:'동 기간 전국 최대 분양 실적 달성 (2022·2023년) / 더시에나 벨루토·서울 컨트리클럽로 사업 확장'
+      },
+      'lotte-buyo': {
+        tag:'Golf & Resort', title:'롯데리조트 부여 & 스카이힐 컨트리클럽',
+        period:'2011년 ~ 2017년', location:'충남 부여군 규암면',
+        items:['롯데 스카이힐 컨트리클럽과 연계 회원모집 수행','롯데 호텔 & 리조트 공식 분양대행사 관계 조성'],
+        result:'전체 물량 100% CU레저 모집 성공'
+      },
+      'hoban': {
+        tag:'Recovery & Etc', title:'호반 호텔 앤 리조트',
+        period:'2018년 5월 ~ 2018년 8월', location:'서울 서초구',
+        items:['회생채권자 동의서 징구 용역','리솜리조트 → 호반 호텔 앤 리조트 인수 관련 용역','대외홍보팀 / 상담팀 / 클레임 전담팀 구성','전문적이고 조직적인 회생전환 용역 수행'],
+        result:'3개월만에 징구 처리 완료 / 회생계획안 인가에 기여'
+      },
+      'haeundae': {
+        tag:'Golf & Resort', title:'해운대 비치 골프 앤 리조트',
+        period:'2017년 6월 ~ 2020년 2월', location:'부산 기장군 기장읍',
+        items:['중국 투자이민 타겟 회원모집 프로젝트 실패 이후 국내 회원모집 전환으로 프로젝트 성공','상품기획, 광고집행, 회원관리 업무 진행','영업조직 셋팅 및 청약 / 본 분양 진행'],
+        result:'전략 전환 후 목표 달성'
+      },
+      'serenity': {
+        tag:'Golf & Resort', title:'세레니티 골프 앤 리조트 (구 실크리버 컨트리클럽)',
+        period:'-', location:'-',
+        items:['즉시 반환 주중회원권 및 특별회원권 분양','2차 프로젝트 컨설팅 진행 중'],
+        result:'진행 중'
+      },
+      'milyang': {
+        tag:'Golf & Resort', title:'밀양 에스파크 골프 앤 리조트',
+        period:'-', location:'경남',
+        items:['금전소비대차 계약을 통한 채권자 모집','경남 회원권 거래소 협회 실패 프로젝트 성공으로 전환'],
+        result:'실패 현장 정상화 완료'
+      },
+      'lakai': {
+        tag:'Golf & Resort', title:'라카이 샌드파인 리조트',
+        period:'2020년 ~ 현재', location:'경남 통영시',
+        items:['샌드파인 GC 주중 혜택 부여를 통한 회원모집','잔여 물량 회원 모집 및 기존 회원 연장 용역 수행'],
+        result:'2020년 이후 지속 수행 중'
+      },
+      'conrad': {
+        tag:'Fitness', title:'콘래드 서울 호텔 피트니스',
+        period:'2015년 3월 ~ 2019년 10월', location:'서울 영등포구',
+        items:['자체 회원모집 실패 프로젝트 착수 후 성공 전환','전체 모집 후 호텔 관리 체제 전환'],
+        result:'전량 모집 성공 / 호텔 관리 체제 전환'
+      },
+      'walkerhill': {
+        tag:'Fitness', title:'비스타 워커힐 서울 호텔',
+        period:'2016년 ~ 현재', location:'서울 광진구',
+        items:['강남·여의도·종로 외 권역의 고액 피트니스 회원권 모집','7년간 지속적인 모집 및 회원관리 수행'],
+        result:'7년+ 장기 모집 및 회원관리 지속 수행'
+      },
+      'lotte-sokcho': {
+        tag:'Condo · Hotel', title:'롯데리조트 속초',
+        period:'2016년 6월 ~ 2018년 7월', location:'강원 속초시',
+        items:['롯데 정책을 통한 3개 대행사 회원모집 진행','전체 판매 중 50% 이상 CU레저 판매 수행'],
+        result:'전체 판매 중 최다 실적 달성'
+      },
+      'skyview': {
+        tag:'Golf & Membership', title:'스카이뷰 컨트리클럽 (함양)',
+        period:'2009년 3월 ~ 2012년 6월', location:'경남 함양군',
+        items:['씨유레저 창립 첫 프로젝트','창립 1차 분양, VIP 특별 주중회원권 모집','대중제 전환 과정 법정관리 절차 인력 파견'],
+        result:'창립 첫 프로젝트 성공 완주'
+      },
+      'jinju': {
+        tag:'Golf & Membership', title:'진주 컨트리클럽',
+        period:'2013년 5월 ~ 2013년 7월', location:'경남 진주시',
+        items:['주중회원권, 선불카드 상품기획 수행','첫 프로젝트 성공으로 시행사 신뢰 확보','이지스카이 컨트리클럽, 퍼시픽 블루 골프앤리조트 수주 계기','진주 컨트리클럽 회원권 전환 용역 및 M&A 컨설팅'],
+        result:'M&A 컨설팅 완료'
+      },
+      'sn-resort': {
+        tag:'Golf & Resort', title:'에스앤 골프리조트',
+        period:'-', location:'-',
+        items:['수익형·거주형 상품 구성 및 사전 청약 업무','사업성 평가 및 분양성 검토 진행'],
+        result:'-'
+      },
+      'geojebyu': {
+        tag:'Golf & Resort', title:'거제뷰 골프 앤 리조트',
+        period:'-', location:'-',
+        items:['회원 숙소 겸용으로 사용하던 객실 회원모집 진행','가족호텔 회원모집 동반자 상품 기획 및 분양'],
+        result:'-'
+      },
+      'ocean-beach': {
+        tag:'Golf & Resort', title:'오션비치 골프 앤 리조트',
+        period:'-', location:'-',
+        items:['실패 프로젝트를 수요자 리타겟팅을 통한 상품 기획'],
+        result:'4개월 만에 시행사 Target 모집액 달성'
+      },
+      'gasan': {
+        tag:'Golf & Membership', title:'가산 노블리제 컨트리클럽 (현 푸른솔GC)',
+        period:'-', location:'-',
+        items:['회원제 골프장 특별회원 및 주중 회원모집 전담 수행'],
+        result:'-'
+      },
+      'podo': {
+        tag:'Golf & Membership', title:'포도 컨트리클럽',
+        period:'-', location:'-',
+        items:['대중제 골프장 이용권 판매','콘도 부지 인·허가 후 콘도회원권 전환 조건으로 상품기획'],
+        result:'-'
+      },
+      'arista': {
+        tag:'Golf & Membership', title:'아리스타 컨트리클럽',
+        period:'-', location:'-',
+        items:['대중제 골프장 이용권 판매'],
+        result:'-'
+      },
+      'easthill': {
+        tag:'Golf & Membership', title:'이스트힐 컨트리클럽',
+        period:'-', location:'-',
+        items:['대중제 골프장 선불카드 판매'],
+        result:'-'
+      },
+      'ezsky': {
+        tag:'Golf & Membership', title:'이지스카이 컨트리클럽',
+        period:'-', location:'-',
+        items:['우선주 모집을 통한 자금 조달 구조 기획 및 투자형 회원 모집'],
+        result:'-'
+      },
+      'pacific-blue': {
+        tag:'Golf & Membership', title:'퍼시픽 블루 골프 앤 리조트',
+        period:'2013년 11월 ~ 2014년 3월', location:'일본 오이타현 쿠니사키시',
+        items:['국내 골프장과 연계하여 지역 베이스 회원모집'],
+        result:'-'
+      },
+      'roadland': {
+        tag:'Golf & Membership', title:'로드랜드 와카야마 골프장',
+        period:'-', location:'일본 와카야마현',
+        items:['상품기획 및 분양성 검토'],
+        result:'-'
+      },
+      'babiang': {
+        tag:'Fitness', title:'레지던스 바비앙 피트니스',
+        period:'-', location:'-',
+        items:['골프 상품과 연계한 고가 전략 회원모집'],
+        result:'-'
+      },
+      'signiel': {
+        tag:'Fitness', title:'롯데 시그니엘 호텔 서울/부산',
+        period:'-', location:'-',
+        items:['VIP 회원모집 및 관리'],
+        result:'-'
+      },
+      'joimaru': {
+        tag:'Fitness', title:'골프존 조이마루',
+        period:'-', location:'-',
+        items:['연회원제 피트니스 회원모집'],
+        result:'-'
+      },
+      'grandjoseon': {
+        tag:'Fitness', title:'그랜드조선 부산 호텔',
+        period:'-', location:'-',
+        items:['VIP 회원모집 및 관리'],
+        result:'-'
+      },
+      'terrace': {
+        tag:'Recovery & Etc', title:'더 테라스호텔',
+        period:'-', location:'-',
+        items:['M&A 용역 업무'],
+        result:'-'
+      },
+      'banpo': {
+        tag:'Recovery & Etc', title:'반포 요트 계류장',
+        period:'-', location:'-',
+        items:['반포 요트 계류장 매각 용역'],
+        result:'-'
+      }
+    };
+
+    let currentCard = null;
+    function openModal(key, cardEl) {
+      const d = data[key];
+      if (!d) return;
+      currentCard = cardEl;
+      const img = cardEl ? cardEl.querySelector('.portfolio-image') : null;
+      const bg = img ? img.style.backgroundImage : '';
+      const cat = cardEl ? cardEl.dataset.cat : '';
+      document.getElementById('modalHero').style.backgroundImage = bg;
+      const periodHtml = d.period !== '-' ? `<p class="modal-period">${d.period}</p>` : '';
+      const resultHtml = d.result !== '-'
+        ? `<div class="modal-result"><strong>Result</strong><p>${d.result}</p></div>`
+        : '';
+      document.getElementById('modalContent').innerHTML = `
+        <div class="modal-tag tag-${cat}">${d.tag}</div>
+        <h2>${d.title}</h2>
+        ${periodHtml}
+        <div class="modal-body">
+          <ul>${d.items.map(i=>`<li>${i}</li>`).join('')}</ul>
+          ${resultHtml}
+        </div>`;
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function forceClose() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeModal(e) {
+      if (e.target.id === 'modalOverlay') forceClose();
+    }
+
+    document.addEventListener('keydown', e => {
+      const overlay = document.getElementById('modalOverlay');
+      if (e.key === 'Escape') { forceClose(); return; }
+      if (!overlay.classList.contains('open')) return;
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      if (!currentCard) return;
+      const visible = [...document.querySelectorAll('.portfolio-card')].filter(c => c.style.display !== 'none');
+      const idx = visible.indexOf(currentCard);
+      if (idx === -1) return;
+      const dir = e.key === 'ArrowRight' ? 1 : -1;
+      const next = visible[(idx + dir + visible.length) % visible.length];
+      const m = (next.getAttribute('onclick') || '').match(/openModal\('([^']+)'/);
+      if (m) openModal(m[1], next);
+    });
+  </script>
+
+  <script src="common.js"></script>
+</body>
+</html>

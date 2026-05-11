@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>프로젝트 문의·연락처 | 씨유레저 CU Leisure</title>
+  <link rel="icon" href="assets/logo/cu_favicon.png" type="image/png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f7941d" />
+  <meta property="og:site_name" content="CU Leisure" />
+  <meta property="og:image" content="https://cu-leisure.com/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="사업지 무료 정밀진단부터 1:1 프로젝트 의뢰까지. 씨유레저 전문가에게 직접 문의하세요. 영업일 기준 24시간 이내 답변드립니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="문의하기 | CU Leisure" />
+  <meta property="og:description" content="사업지 무료 정밀진단부터 1:1 프로젝트 의뢰까지. 씨유레저 전문가에게 직접 문의하세요. 영업일 기준 24시간 이내 답변드립니다." />
+  <meta property="og:url" content="https://cu-leisure.com/contact.html" />
+  <link rel="canonical" href="https://cu-leisure.com/contact.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "주식회사 씨유레저",
+    "alternateName": "CU Leisure",
+    "image": "https://cu-leisure.com/assets/images/og-image.jpg",
+    "url": "https://cu-leisure.com",
+    "telephone": "+82-2-449-8221",
+    "email": "chaeumgnl@naver.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "강남구 봉은사로82길 9-5 2F,3F",
+      "addressLocality": "서울특별시",
+      "addressCountry": "KR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "areaServed": "KR"
+  }
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="common.css"/>
+  <style>
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
+    .contact-info { padding: 44px; border-radius: 28px; border: 1px solid var(--line); background: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,.04); }
+    .contact-info h2 { font-size: 28px; font-weight: 900; letter-spacing: -.03em; margin-bottom: 12px; }
+    .contact-info > p { color: var(--muted); font-size: 15px; line-height: 1.75; margin-bottom: 32px; }
+    .contact-item { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+    .contact-item:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .contact-icon { width: 46px; height: 46px; border-radius: 14px; background: #1a2332; border: none; display: grid; place-items: center; flex-shrink: 0; color: #ffffff; font-size: 20px; }
+    .contact-item-body { flex: 1; }
+    .contact-item strong { display: block; font-size: 11px; color: #8a96a8; text-transform: uppercase; letter-spacing: .15em; font-weight: 700; margin-bottom: 4px; }
+    .contact-item span { color: #1a2332; font-size: 16px; font-weight: 700; line-height: 1.4; }
+    .contact-item p { color: var(--muted); font-size: 13px; margin-top: 2px; line-height: 1.5; }
+    .contact-form { padding: 44px 36px 28px; border-radius: 28px; border: 1px solid var(--line); background: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,.04); }
+    .contact-form h2 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 11px; color: #8a96a8; text-transform: uppercase; letter-spacing: .15em; font-weight: 700; margin-bottom: 8px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 13px 16px;
+      background: #ffffff; border: 1px solid rgba(0,0,0,.1);
+      border-radius: 12px; color: #1a2332; font-size: 15px; font-family: inherit;
+      outline: none; transition: .2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(247,148,29,.15); }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .form-group select option { background: #ffffff; color: #1a2332; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #94a3b8; }
+    .location-map { margin-top: 72px; padding: 44px; border-radius: 28px; border: 1px solid var(--line); background: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,.04); }
+    .location-map h3 { font-size: 22px; font-weight: 900; margin-bottom: 6px; }
+    .location-map > p { color: var(--muted); font-size: 15px; margin-bottom: 24px; }
+    .map-frame { width: 100%; height: 300px; border-radius: 18px; border: 1px solid var(--line); overflow: hidden; }
+    .map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .address-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+    .address-item { padding: 20px 22px; border-radius: 16px; background: #f8fbff; border: 1px solid var(--line); }
+    .address-item strong { display: block; font-size: 11px; color: #8a96a8; text-transform: uppercase; letter-spacing: .15em; font-weight: 700; margin-bottom: 8px; }
+    .address-item span { color: #1a2332; font-size: 14px; font-weight: 600; display: block; margin-bottom: 4px; }
+    .address-item p { color: var(--muted); font-size: 13px; line-height: 1.5; }
+    @media(max-width:900px) { .contact-layout { grid-template-columns: 1fr; } .address-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><img src="assets/logo/cu_logo.png" alt="CU Leisure 씨유레저" /></a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="solution.html">Solution</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="client.html">Client</a>
+        <a href="insight.html">Insight</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <a class="btn btn-primary btn-sm nav-cta" href="contact.html">Contact Us</a>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero" style="background-image:url('assets/images/hero-pages/contact.webp');">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>귀사의 사업지를 위한<br>전문가 1:1 리스크 진단</h1>
+        <p>새 사업 기획이든, 막혀버린 현장이든. 씨유레저가 가장 현실적인 해결책을 찾아드립니다.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <h2>직접 연락하기</h2>
+            <p>전화나 이메일로 먼저 간단히 상황을 공유해 주세요. 담당자가 빠르게 검토 후 연락드립니다.</p>
+            <div class="contact-item">
+              <div class="contact-icon">✉</div>
+              <div class="contact-item-body">
+                <strong>Email</strong>
+                <span>chaeumgnl@naver.com</span>
+                <p>사업지 현황을 간략히 적어주시면 더 빠른 답변이 가능합니다.</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">☎</div>
+              <div class="contact-item-body">
+                <strong>Phone</strong>
+                <span>02-449-8221</span>
+                <p>평일 09:00 – 18:00 운영</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">◎</div>
+              <div class="contact-item-body">
+                <strong>Response Time</strong>
+                <span>영업일 기준 24시간 이내</span>
+                <p>접수된 모든 문의는 검토 후 담당자가 직접 연락드립니다.</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">★</div>
+              <div class="contact-item-body">
+                <strong>Specialty</strong>
+                <span style="font-size:13px;font-weight:600;line-height:1.7;">분양 대행 · 법정관리 회생 · 골프 멤버십<br>리조트 운영 · M&amp;A · 위탁운영</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h2>문의 남기기</h2>
+            <iframe data-tally-src="https://tally.so/embed/81Jy1O?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="560" frameborder="0" marginheight="0" marginwidth="0" title="문의 남기기" style="display:block;margin:0 -8px;width:calc(100% + 16px);"></iframe>
+            <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+          </div>
+        </div>
+
+        <!-- 찾아오시는 길 -->
+        <div class="location-map">
+          <h3>찾아오시는 길</h3>
+          <p>씨유레저 본사 및 영남지사</p>
+          <div class="map-frame">
+            <iframe
+              src="https://maps.google.com/maps?q=서울+강남구+봉은사로82길+9-5&output=embed&hl=ko&z=16"
+              allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="address-grid">
+            <div class="address-item">
+              <strong>본사 (서울)</strong>
+              <span>서울시 강남구 봉은사로82길 9-5 2F, 3F</span>
+              <p>지하철 9호선 봉은사역 4번 출구 도보 5분</p>
+            </div>
+            <div class="address-item">
+              <strong>영남지사</strong>
+              <span>울산광역시 북구 관문길 40, 3층</span>
+              <p>영남 지역 문의 담당</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-info-row">
+          <div class="footer-info-item footer-brand">
+            <strong>주식회사 씨유레저</strong>
+            <span>대표 채수용 | 사업자 220-87-89046</span>
+            <span>개인정보관리책임자 이요한</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>본사</strong>
+            <span>서울 강남구 봉은사로82길 9-5 2F,3F</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>영남지사</strong>
+            <span>울산광역시 북구 관문길 40, 3층</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>연락처</strong>
+            <span>02-449-8221</span>
+            <span>chaeumgnl@naver.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-line">
+        <span>© 2026 CU Leisure. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="insight.html">Insight</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="common.js"></script>
+</body>
+</html>
+
+
+

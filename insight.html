@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>전문가 인사이트·칼럼 | 씨유레저 CU Leisure</title>
+  <link rel="icon" href="assets/logo/cu_favicon.png" type="image/png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f7941d" />
+  <meta property="og:site_name" content="CU Leisure" />
+  <meta property="og:image" content="https://cu-leisure.com/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="회원권 시장 분석, 분양 전략, 골프 산업 동향, 시장 전망, CEO 인터뷰 — 씨유레저 전문가들이 현장에서 직접 쌓아온 심층 아티클 모음입니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="전문가 인사이트 | CU Leisure" />
+  <meta property="og:description" content="회원권 시장 분석, 분양 전략, 골프 산업 동향, 시장 전망 — 씨유레저가 직접 작성한 심층 아티클 모음." />
+  <meta property="og:url" content="https://cu-leisure.com/insight.html" />
+  <link rel="canonical" href="https://cu-leisure.com/insight.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "CU Leisure Insight",
+    "alternateName": "씨유레저 인사이트",
+    "description": "회원권 시장 분석, 분양 전략, 골프 산업 동향, CEO 인터뷰. 씨유레저 전문가들이 직접 작성한 심층 아티클.",
+    "url": "https://cu-leisure.com/insight.html",
+    "inLanguage": "ko-KR",
+    "publisher": {
+      "@type": "Organization",
+      "name": "주식회사 씨유레저",
+      "alternateName": "CU Leisure",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cu-leisure.com/assets/logo/cu_logo.png"
+      }
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="common.css"/>
+  <style>
+    .insight-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; min-height: 200px; }
+    .insight-card { display: block; color: inherit; border-radius: var(--radius); border: 1px solid var(--line); background: #ffffff; overflow: hidden; transition: transform .25s, box-shadow .25s, border-color .25s; box-shadow: var(--shadow); }
+    .insight-card:hover { transform: translateY(-5px); box-shadow: 0 16px 36px rgba(0,0,0,.08); border-color: rgba(0,0,0,.12); }
+    .insight-thumb { height: 200px; background: center/cover no-repeat #d8e8f4; border-bottom: 1px solid var(--line); position: relative; }
+    .insight-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(12,18,32,.05),rgba(12,18,32,.4)); }
+    .insight-body { padding: 26px; }
+    .insight-cat { display: inline-block; padding: 0; border-radius: 0; background: none; border: none; color: #8a96a8; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .15em; margin-bottom: 14px; }
+    .insight-body h3 { font-size: 18px; font-weight: 800; line-height: 1.4; margin-bottom: 12px; }
+    .insight-body p { color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 16px; }
+    .insight-meta { color: #5a6b7f; font-size: 12px; display: flex; gap: 8px; align-items: center; }
+    .insight-meta span { color: #5a6b7f; }
+    .featured-card { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; }
+    .featured-card .insight-thumb { height: auto; min-height: 260px; }
+    .featured-body { display: flex; flex-direction: column; justify-content: center; }
+    @media(max-width:1100px) { .insight-grid { grid-template-columns: repeat(2,1fr); } .featured-card { grid-column: span 1; display: block; } .featured-card .insight-thumb { height: 220px; min-height: unset; } .featured-body { display: block; } }
+    @media(max-width:760px) { .insight-grid { grid-template-columns: 1fr; } .featured-card .insight-thumb { height: 220px; } }
+    /* Filter tabs */
+    .filter-bar { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 36px; padding-bottom: 0; border-bottom: 1px solid rgba(0,0,0,.08); }
+    .filter-btn { padding: 14px 0; margin-bottom: -1px; border: none; border-bottom: 2px solid transparent; border-radius: 0; background: none; color: #8a96a8; font-size: 14px; font-weight: 600; cursor: pointer; transition: .2s; font-family: inherit; }
+    .filter-btn:hover { background: none; color: #1a2332; }
+    .filter-btn.active { background: none; color: #1a2332; border-color: #1a2332; font-weight: 800; }
+    /* Empty state */
+    .insight-empty { grid-column: 1 / -1; padding: 80px 0; text-align: center; color: #8a96a8; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><img src="assets/logo/cu_logo.png" alt="CU Leisure 씨유레저" /></a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="solution.html">Solution</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="client.html">Client</a>
+        <a href="insight.html" class="active">Insight</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-secondary btn-sm nav-cta" href="contact.html">Contact Us</a>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero" style="background-image:url('assets/images/hero-pages/insight.webp');">
+      <div class="container">
+        <span class="eyebrow">Insight</span>
+        <h1>전문가가 진단하는<br>레저 시장의 리얼 리스크</h1>
+        <p>씨유레저가 현장에서 직접 쌓아온 인사이트. 회원권 시장과 사업지 정상화에 관한 전문 콘텐츠입니다.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" id="filterBar"></div>
+        <div class="insight-grid" id="insightGrid"></div>
+        <div class="pagination" id="insightPagination"></div>
+      </div>
+    </section>
+  </main>
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-info-row">
+          <div class="footer-info-item footer-brand">
+            <strong>주식회사 씨유레저</strong>
+            <span>대표 채수용 | 사업자 220-87-89046</span>
+            <span>개인정보관리책임자 이요한</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>본사</strong>
+            <span>서울 강남구 봉은사로82길 9-5 2F,3F</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>영남지사</strong>
+            <span>울산광역시 북구 관문길 40, 3층</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>연락처</strong>
+            <span>02-449-8221</span>
+            <span>chaeumgnl@naver.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-line">
+        <span>© 2026 CU Leisure. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="insight.html">Insight</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="common.js"></script>
+  <script>
+    /* Insight 인덱스: POSTS 메타 기반 동적 렌더링 */
+    (function () {
+      const POSTS_PER_PAGE = 9;
+      let currentCategory = 'all';
+      let currentPage = 1;
+
+      const filterBar = document.getElementById('filterBar');
+      const grid = document.getElementById('insightGrid');
+      const pagination = document.getElementById('insightPagination');
+
+      function fromRootPath(p) {
+        return p.startsWith('../') ? p.substring(3) : p;
+      }
+
+      function getCategories() {
+        const seen = new Set();
+        const ordered = [];
+        POSTS.forEach(p => { if (!seen.has(p.cat)) { seen.add(p.cat); ordered.push(p.cat); } });
+        return ['all', ...ordered];
+      }
+
+      function getFiltered() {
+        return currentCategory === 'all' ? POSTS : POSTS.filter(p => p.cat === currentCategory);
+      }
+
+      function renderFilters() {
+        const cats = getCategories();
+        filterBar.innerHTML = cats.map(c =>
+          `<button class="filter-btn ${c === currentCategory ? 'active' : ''}" data-cat="${c}">${c === 'all' ? '전체' : c}</button>`
+        ).join('');
+        filterBar.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            currentCategory = btn.dataset.cat;
+            currentPage = 1;
+            renderFilters();
+            renderGrid();
+            renderPagination();
+          });
+        });
+      }
+
+      function renderGrid() {
+        const filtered = getFiltered();
+        if (filtered.length === 0) {
+          grid.innerHTML = '<div class="insight-empty">해당 카테고리의 글이 아직 없습니다.</div>';
+          return;
+        }
+        const start = (currentPage - 1) * POSTS_PER_PAGE;
+        const pageItems = filtered.slice(start, start + POSTS_PER_PAGE);
+        grid.innerHTML = pageItems.map((p, i) => {
+          const featured = i === 0 && currentPage === 1 && currentCategory === 'all';
+          return `
+            <a href="posts/${p.slug}.html" class="insight-card ${featured ? 'featured-card' : ''}" data-cat="${p.cat}">
+              <div class="insight-thumb" style="background-image:url('${fromRootPath(p.img)}');"></div>
+              <div class="insight-body ${featured ? 'featured-body' : ''}">
+                <span class="insight-cat">${p.cat}</span>
+                <h3${featured ? ' style="font-size:22px;"' : ''}>${p.title}</h3>
+                <p>${p.desc}</p>
+                <div class="insight-meta"><span>${p.date}</span><span>·</span><span>읽는 시간 약 ${p.read}</span></div>
+              </div>
+            </a>`;
+        }).join('');
+      }
+
+      function renderPagination() {
+        const filtered = getFiltered();
+        const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
+        if (totalPages <= 1) { pagination.innerHTML = ''; return; }
+
+        let html = '';
+        html += `<button class="page-btn page-nav" data-page="prev" ${currentPage === 1 ? 'disabled' : ''} aria-label="이전 페이지">‹</button>`;
+        for (let i = 1; i <= totalPages; i++) {
+          html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+        html += `<button class="page-btn page-nav" data-page="next" ${currentPage === totalPages ? 'disabled' : ''} aria-label="다음 페이지">›</button>`;
+        pagination.innerHTML = html;
+
+        pagination.querySelectorAll('.page-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            if (btn.disabled) return;
+            const v = btn.dataset.page;
+            if (v === 'prev') currentPage = Math.max(1, currentPage - 1);
+            else if (v === 'next') currentPage = Math.min(totalPages, currentPage + 1);
+            else currentPage = parseInt(v, 10);
+            renderGrid();
+            renderPagination();
+            document.querySelector('.section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+      }
+
+      function init() {
+        if (typeof POSTS === 'undefined') return;
+        renderFilters();
+        renderGrid();
+        renderPagination();
+      }
+
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+    })();
+  </script>
+</body>
+</html>

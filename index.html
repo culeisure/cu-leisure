@@ -1,0 +1,1064 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CU Leisure | 어떤 사업지든, 우리의 손에서 결과가 나옵니다</title>
+  <link rel="icon" href="assets/logo/cu_favicon.png" type="image/png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f7941d" />
+  <meta property="og:site_name" content="CU Leisure" />
+  <meta property="og:image" content="https://cu-leisure.com/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="18년 무사고·25만 VIP DB·100% 정상화 실행력. 씨유레저는 레저 자산의 기획·분양·운영·회생까지 전 과정을 책임지는 대한민국 레저 자산 전문 End-to-End 파트너입니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="CU Leisure | 레저 자산 전문 End-to-End 파트너" />
+  <meta property="og:description" content="18년 무사고·25만 VIP DB·100% 정상화 실행력. 씨유레저는 레저 자산의 기획·분양·운영·회생까지 전 과정을 책임지는 대한민국 레저 자산 전문 End-to-End 파트너입니다." />
+  <meta property="og:url" content="https://cu-leisure.com/" />
+  <link rel="canonical" href="https://cu-leisure.com/" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #fafaf7;
+      --line: rgba(0,0,0,.06);
+      --text: #1a2332;
+      --muted: #5a6b7f;
+      --accent: #f7941d;
+      --gold: #c8a86b;
+      --max: 1200px;
+      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --radius: 24px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; word-break: keep-all; overflow-wrap: break-word; }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #ffffff 0%, #fafaf7 50%, #f5f3ed 100%);
+      line-height: 1.6;
+      min-height: 100vh;
+      word-break: keep-all; overflow-wrap: break-word;
+    }
+    h1, h2, h3, h4, p, span, li, strong, small, a, button { word-break: keep-all; overflow-wrap: break-word; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--max), calc(100% - 80px)); margin: 0 auto; }
+    .section { padding: 100px 0; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+
+    /* eyebrow */
+    .eyebrow {
+      display: inline-block;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      color: #8a96a8;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      background: none;
+      margin-bottom: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    /* nav */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid rgba(247,148,29,.1);
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .nav-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-size: 20px; font-weight: 900; letter-spacing: .03em; color: #1a2332; }
+    /* ── HERO SLIDESHOW ── */
+    .hero { position: relative; min-height: 680px; display: flex; align-items: center; overflow: hidden; }
+    .hero-slides { position: absolute; inset: 0; }
+    .hero-slide {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: 0; transition: opacity 1.2s ease-in-out;
+    }
+    .hero-slide.active { opacity: 1; animation: heroZoom 9s ease-out forwards; }
+    @keyframes heroZoom {
+      0%   { transform: scale(1); }
+      100% { transform: scale(1.07); }
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg, rgba(5,12,38,.88) 0%, rgba(5,12,38,.72) 50%, rgba(5,12,38,.45) 100%);
+    }
+    .hero-content { position: relative; z-index: 10; padding: 80px 0; width: 100%; }
+    .hero-copy {
+      max-width: 680px; padding-left: 24px; transition: opacity 0.22s ease;
+      background: linear-gradient(90deg, rgba(5,12,38,.55) 0%, transparent 100%);
+      padding: 32px 32px 32px 28px;
+      border-radius: 12px;
+    }
+    .hero-copy .eyebrow { color: rgba(255,255,255,.85); background: none; }
+    .hero h1 { margin: 18px 0 22px; font-size: clamp(30px,4vw,48px); line-height: 1.1; letter-spacing: -.04em; font-weight: 900; color: #ffffff; text-shadow: 0 2px 20px rgba(0,0,0,.7); word-break: keep-all; }
+    .hero h1 em { font-style: normal; color: #f0c060; }
+    .hero-desc { max-width: 560px; color: #ffffff; font-size: 17px; line-height: 1.8; word-break: keep-all; overflow-wrap: break-word; text-shadow: 0 1px 12px rgba(0,0,0,.8); }
+    @media (max-width: 760px) {
+      .hero-overlay { background: rgba(5,12,38,.80); }
+      .hero-copy { padding: 24px 20px; background: none; }
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+    .hero-actions .btn-primary:hover { background: #ffffff; color: var(--accent); box-shadow: 0 8px 24px rgba(255,255,255,.25); }
+    .btn-outline { background: transparent; color: #ffffff; border-color: rgba(255,255,255,.55); }
+    .btn-outline:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.9); }
+    .hero-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
+    @media (max-width: 600px) { .hero-cards { grid-template-columns: 1fr; } }
+    .hero-card { padding: 16px 18px; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.1); backdrop-filter: blur(8px); border-radius: 16px; word-break: keep-all; overflow-wrap: break-word; }
+    .hero-card strong { display: block; font-size: 12px; font-weight: 700; color: rgba(255,255,255,.7); text-transform: uppercase; letter-spacing: .15em; margin-bottom: 8px; word-break: keep-all; }
+    .hero-card-value { display: block; color: #ffffff; font-size: 14px; font-weight: 700; line-height: 1.4; word-break: keep-all; overflow-wrap: break-word; }
+    .hero-card-value.is-count { font-size: 30px; font-weight: 900; letter-spacing: -.02em; line-height: 1; margin-bottom: 4px; }
+    .hero-card small { display: block; color: rgba(255,255,255,.62); font-size: 11px; margin-top: 5px; line-height: 1.4; word-break: keep-all; }
+
+    /* Hero copy + animations */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideInRight { from { opacity: 0; transform: translateX(52px); } to { opacity: 1; transform: translateX(0); } }
+    .hero-copy.animating > * { opacity: 0; animation: fadeUp .8s ease-out forwards; }
+    .hero-copy.animating > *:nth-child(1) { animation-delay: .05s; }
+    .hero-copy.animating > *:nth-child(2) { animation-delay: .2s; }
+    .hero-copy.animating > *:nth-child(3) { animation-delay: .35s; }
+    .hero-copy.animating > *:nth-child(4) { animation-delay: .5s; }
+    .hero-copy.animating > *:nth-child(5) { animation-delay: .65s; }
+    .hero-copy.animating-right > * { opacity: 0; animation: slideInRight 1.1s cubic-bezier(.16,.84,.44,1) forwards; }
+    .hero-copy.animating-right > *:nth-child(1) { animation-delay: .05s; }
+    .hero-copy.animating-right > *:nth-child(2) { animation-delay: .22s; }
+    .hero-copy.animating-right > *:nth-child(3) { animation-delay: .38s; }
+    .hero-copy.animating-right > *:nth-child(4) { animation-delay: .54s; }
+    .hero-copy.animating-right > *:nth-child(5) { animation-delay: .68s; }
+
+    /* Section alternate background */
+    .section-alt { background: linear-gradient(180deg, #fafaf7 0%, #f3eee5 100%); }
+
+    /* Hero Dots */
+    .hero-dots { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 20; display: flex; gap: 10px; }
+    .hero-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.35); cursor: pointer; transition: all .3s; border: none; padding: 0; }
+    .hero-dot.active { background: #ffffff; width: 28px; border-radius: 5px; }
+
+    /* Hero Arrows */
+    .hero-arrow { position: absolute; bottom: 28px; z-index: 20; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,.4); background: rgba(10,20,50,.3); backdrop-filter: blur(8px); color: #ffffff; font-size: 16px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .3s ease, background .25s ease; }
+    .hero-arrow-prev { left: 28px; }
+    .hero-arrow-next { right: 28px; }
+    .hero:hover .hero-arrow { opacity: 1; }
+    .hero-arrow:hover { background: rgba(247,148,29,.6); border-color: rgba(255,255,255,.8); }
+    @media (max-width: 760px) { .hero-arrow { display: none; } }
+
+    /* pain */
+    .pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .pain-card { padding: 34px 30px; border-radius: var(--radius); border: 1px solid var(--line); background: #ffffff; box-shadow: var(--shadow); }
+    .kicker { display: inline-block; color: #8a96a8; font-size: 11px; text-transform: uppercase; letter-spacing: .18em; font-weight: 700; margin-bottom: 18px; padding: 0; border: none; background: none; }
+    .pain-card h3 { margin: 0 0 16px; font-size: 20px; line-height: 1.5; color: #1a2332; font-weight: 800; }
+    .pain-card p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+
+    /* case */
+    .case-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .case-card { padding: 32px 28px; border-radius: var(--radius); border: 1px solid var(--line); background: #ffffff; cursor: pointer; transition: transform .25s, border-color .25s, box-shadow .25s; box-shadow: var(--shadow); }
+    .case-card:hover { transform: translateY(-5px); border-color: rgba(247,148,29,.3); box-shadow: 0 20px 50px rgba(247,148,29,.15); }
+    .case-num { font-size: 11px; color: #8a96a8; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 18px; }
+    .case-card h3 { margin: 0 0 14px; font-size: 18px; line-height: 1.5; color: #1a2332; font-weight: 800; }
+    .case-card p { margin: 0 0 20px; color: var(--muted); font-size: 14px; line-height: 1.78; }
+    .case-result { display: inline-block; color: #1a2332; font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+
+    /* modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 100; backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 24px; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #ffffff; border: 1px solid var(--line); border-radius: 28px; padding: 52px; max-width: 700px; width: 100%; max-height: 88vh; overflow-y: auto; position: relative; box-shadow: 0 32px 80px rgba(0,0,0,.18); animation: modalIn .3s ease-out; }
+    @keyframes modalIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .modal-close { position: absolute; top: 22px; right: 24px; background: rgba(247,148,29,.08); border: 1px solid rgba(247,148,29,.2); border-radius: 999px; color: #5a6b7f; font-size: 16px; width: 38px; height: 38px; display: grid; place-items: center; cursor: pointer; transition: .2s; font-family: inherit; }
+    .modal-close:hover { background: rgba(247,148,29,.15); color: var(--accent); }
+    .modal-num { font-size: 11px; color: var(--accent); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; }
+    .modal h2 { font-size: clamp(20px,3vw,28px); line-height: 1.3; letter-spacing: -.03em; margin: 0 0 32px; color: #1a2332; font-weight: 800; }
+    .modal-block { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+    .modal-block:last-of-type { border-bottom: none; }
+    .modal-block strong { display: block; color: var(--accent); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; font-weight: 700; }
+    .modal-block p { color: var(--muted); font-size: 16px; line-height: 1.85; margin: 0; }
+    .modal-result { margin-top: 28px; padding: 26px; border-radius: 18px; background: rgba(247,148,29,.05); border: 1px solid rgba(247,148,29,.15); }
+    .modal-result strong { display: block; color: var(--accent); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; font-weight: 700; }
+    .modal-result p { color: #1a2332; font-size: 16px; line-height: 1.85; margin: 0; font-weight: 600; }
+
+    /* solution - 5-card bento */
+    .solution-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 16px; }
+    .solution-card { padding: 32px; border-radius: var(--radius); border: 1px solid var(--line); background: #ffffff; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+    .solution-card.feature { grid-row: span 2; padding: 44px; background: #1a2332; color: #ffffff; border-color: #1a2332; }
+    .solution-card.feature h3 { color: #ffffff; font-size: 24px; }
+    .solution-card.feature p { color: rgba(255,255,255,.75); }
+    .solution-card.feature .solution-num { background: var(--accent); color: #ffffff; }
+    .solution-num { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: #1a2332; border: none; color: #ffffff; font-weight: 800; font-size: 14px; margin-bottom: 18px; }
+    .solution-card h3 { margin: 0 0 12px; font-size: 18px; font-weight: 800; line-height: 1.3; color: #1a2332; }
+    .solution-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+    @media(max-width:1000px) { .solution-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; } .solution-card.feature { grid-row: span 2; grid-column: span 2; padding: 36px; } }
+    @media(max-width:760px) { .solution-grid { grid-template-columns: 1fr; } .solution-card.feature { grid-row: auto; grid-column: auto; padding: 32px; } }
+
+    /* portfolio card */
+    .portfolio-card { overflow: hidden; padding: 0; cursor: pointer; transition: transform .25s, box-shadow .25s; display: block; color: inherit; }
+    .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(247,148,29,.15); }
+    .portfolio-image { aspect-ratio: 16 / 9; background: center/cover no-repeat; border-bottom: 1px solid var(--line); position: relative; }
+    .portfolio-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,30,80,.4)); }
+    .portfolio-body { padding: 26px; }
+    .portfolio-body h3 { margin: 0 0 10px; font-size: 20px; font-weight: 800; color: #1a2332; }
+    .portfolio-body p { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .portfolio-tag { display: inline-block; padding: 0; border-radius: 0; background: none; border: none; color: #8a96a8; font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 14px; }
+    .meta-item { padding: 14px 0 0; margin-top: 14px; background: none; border: none; border-top: 1px solid rgba(0,0,0,.06); border-radius: 0; }
+    .meta-item strong { display: inline; color: #8a96a8; font-size: 10px; text-transform: uppercase; letter-spacing: .15em; margin-right: 10px; font-weight: 700; }
+    .meta-item span { display: inline; color: #5a6b7f; font-size: 13px; font-weight: 600; }
+
+    /* trust strip - hero 직후 1줄 마퀴 */
+    .trust-strip { padding: 28px 0 30px; background: #ffffff; border-bottom: 1px solid rgba(0,0,0,.05); overflow: hidden; position: relative; }
+    .trust-strip::before, .trust-strip::after { content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none; }
+    .trust-strip::before { left: 0; background: linear-gradient(90deg, #ffffff, transparent); }
+    .trust-strip::after { right: 0; background: linear-gradient(270deg, #ffffff, transparent); }
+    .trust-caption { text-align: center; font-size: 11px; font-weight: 700; color: #8a96a8; letter-spacing: .2em; text-transform: uppercase; margin: 0 0 18px; }
+    .trust-track { display: flex; gap: 80px; width: max-content; animation: marquee-left 50s linear infinite; align-items: center; }
+    .trust-strip:hover .trust-track { animation-play-state: paused; }
+    .trust-logo { flex-shrink: 0; min-width: 200px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: #8a96a8; letter-spacing: .05em; transition: color .25s ease; padding: 4px 8px; white-space: nowrap; text-decoration: none; }
+    .trust-logo:hover { color: #1a2332; }
+
+    /* client marquee */
+    .marquee-wrap { position: relative; overflow: hidden; padding: 12px 0; }
+    .marquee-wrap::before, .marquee-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none; }
+    .marquee-wrap::before { left: 0; background: linear-gradient(90deg, #fafaf7 0%, transparent 100%); }
+    .marquee-wrap::after { right: 0; background: linear-gradient(270deg, #fafaf7 0%, transparent 100%); }
+    .marquee-track { display: flex; gap: 16px; width: max-content; animation: marquee-left 50s linear infinite; }
+    .marquee-track.reverse { animation: marquee-right 50s linear infinite; margin-top: 14px; }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes marquee-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+    .client-logo { flex-shrink: 0; padding: 22px 28px; border-radius: 12px; border: 1px solid rgba(0,0,0,.06); background: #ffffff; display: flex; align-items: center; justify-content: center; color: #5a6b7f; font-size: 13px; font-weight: 800; letter-spacing: .06em; text-align: center; transition: .25s; min-height: 72px; min-width: 180px; line-height: 1.5; box-shadow: 0 2px 6px rgba(0,0,0,.04); }
+    .client-logo:hover { border-color: rgba(0,0,0,.18); color: #1a2332; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+    .client-logo img { max-height: 56px; max-width: 170px; width: auto; height: auto; object-fit: contain; }
+    .trust-logo img { max-height: 48px; max-width: 180px; width: auto; height: auto; object-fit: contain; }
+
+    /* team */
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .testi-card { padding: 36px 32px; border-radius: 24px; border: 1px solid var(--line); background: #ffffff; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+    .testi-quote { font-size: 16px; line-height: 1.8; color: #1a2332; font-weight: 600; border-left: 3px solid #1a2332; padding-left: 20px; margin-bottom: 28px; flex: 1; }
+    .testi-author { border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-direction: column; gap: 4px; }
+    .testi-name { font-size: 15px; font-weight: 800; color: #1a2332; }
+    .testi-role { font-size: 13px; color: var(--muted); }
+    .testi-project { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 700; letter-spacing: .15em; color: #8a96a8; background: none; border: none; padding: 0; text-transform: uppercase; }
+    @media(max-width:900px) { .testi-grid { grid-template-columns: 1fr; } }
+
+    /* cta */
+    .cta { border: 1px solid rgba(247,148,29,.15); background: linear-gradient(135deg, rgba(247,148,29,.06), rgba(232,244,248,.3)); border-radius: 32px; padding: 52px; display: flex; justify-content: space-between; gap: 36px; align-items: center; box-shadow: var(--shadow); }
+    .cta h2 { margin: 0 0 14px; font-size: clamp(26px,4vw,42px); line-height: 1.2; letter-spacing: -.03em; font-weight: 900; color: #1a2332; }
+    .cta p { margin: 0; color: var(--muted); max-width: 560px; font-size: 16px; line-height: 1.75; }
+
+    /* footer */
+    .footer { padding: 52px 0 60px; color: #5a6b7f; font-size: 13px; background: linear-gradient(180deg, #ffffff, #f5f8fc); border-top: 1px solid var(--line); }
+    .footer-info { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
+    .footer-info-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .footer-info-item strong { display: block; color: #1a2332; font-size: 13px; font-weight: 800; letter-spacing: .02em; text-transform: none; margin-bottom: 8px; }
+    .footer-info-item span { color: #1a2332; font-size: 13px; display: block; line-height: 1.6; }
+    .footer-brand strong { color: #1a2332; font-size: 14px; text-transform: none; letter-spacing: 0; }
+    .footer-brand span { color: #5a6b7f; }
+    .footer-line { padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+    .footer-links { display: flex; gap: 22px; }
+    .footer-links a:hover { color: var(--accent); transition: color .2s; }
+
+    /* 반응형 */
+    @media (max-width: 1100px) {
+      .hero-content-wrap { grid-template-columns: 1fr; }
+      .solution-grid { grid-template-columns: repeat(2,1fr); }
+      .cycle-wrap { grid-template-columns: repeat(3,1fr); }
+      .cycle-wrap::before { display: none; }
+      .client-logos { grid-template-columns: repeat(3,1fr); }
+      .footer-info-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .hero { min-height: 560px; }
+      .section { padding: 72px 0; }
+      .pain-grid, .case-grid, .grid-3, .solution-grid { grid-template-columns: 1fr; }
+      .cycle-wrap { grid-template-columns: 1fr; }
+      .client-logos { grid-template-columns: repeat(2,1fr); }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      .hero-actions, .hero-metrics { flex-direction: column; align-items: flex-start; }
+      .cta { flex-direction: column; align-items: flex-start; padding: 36px; }
+      .modal { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><img src="assets/logo/cu_logo.png" alt="CU Leisure 씨유레저" /></a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="solution.html">Solution</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="client.html">Client</a>
+        <a href="insight.html">Insight</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-secondary btn-sm nav-cta" href="contact.html">Contact Us</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO SLIDESHOW ── -->
+    <section class="hero">
+      <div class="hero-slides">
+        <div class="hero-slide active" style="background-image:url('assets/images/hero/h-1_thesiena.webp');"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/hero/h-2_serenity.webp');"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/hero/h-3_lakai.webp');"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/hero/h-4_haundae.webp');"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/hero/h-5_lotte_resort.webp');"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-copy animating" id="heroCopy"></div>
+      </div>
+
+      <button class="hero-arrow hero-arrow-prev" id="heroPrev" aria-label="이전 슬라이드">&#8249;</button>
+      <button class="hero-arrow hero-arrow-next" id="heroNext" aria-label="다음 슬라이드">&#8250;</button>
+
+      <div class="hero-dots">
+        <button class="hero-dot active" onclick="goSlide(0)"></button>
+        <button class="hero-dot" onclick="goSlide(1)"></button>
+        <button class="hero-dot" onclick="goSlide(2)"></button>
+        <button class="hero-dot" onclick="goSlide(3)"></button>
+        <button class="hero-dot" onclick="goSlide(4)"></button>
+      </div>
+    </section>
+
+    <!-- Trust strip — 히어로 직후 신뢰 리본 (전체 23개, 카테고리 믹스) -->
+    <section class="trust-strip">
+      <div class="trust-caption">Trusted Partners</div>
+      <div class="trust-track">
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/lotte_resort_logo.svg" alt="롯데리조트 부여 속초 LOTTE RESORT"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/jinjucc_logo.png" alt="진주CC 진주 컨트리클럽 JINJU CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/conrad_logo.webp" alt="콘래드 서울 호텔 CONRAD SEOUL"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/lakai_logo.webp" alt="라카이 샌드파인 리조트 통영 LAKAI SANDPINE"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/arista_logo.png" alt="아리스타CC 아리스타 컨트리클럽 ARISTA CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/siena_logo.webp" alt="더 시에나 골프 앤 리조트 제주 THE SIENA"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/vista_logo.png" alt="비스타 워커힐 서울 VISTA WALKERHILL"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/skyviewcc_logo.png" alt="스카이뷰CC 스카이뷰 컨트리클럽 함양 SKY VIEW CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/resome_logo.webp" alt="리솜 호반 호텔 앤 리조트 RESOM"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/signiel_logo.svg" alt="시그니엘 서울 부산 호텔 SIGNIEL"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/podocc_logo.webp" alt="포도CC 포도 컨트리클럽 PODO CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/haeundae_beach_logo.webp" alt="해운대 비치 골프 앤 리조트 부산 HAEUNDAE BEACH"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/golfzone_logo.webp" alt="골프존 조이마루 GOLFZON ZOIMARU"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/josun_logo.webp" alt="그랜드 조선 부산 호텔 GRAND JOSUN"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/easthill_logo.png" alt="이스트힐CC 이스트힐 컨트리클럽 EAST HILL CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/serenity_logo.webp" alt="세레니티 골프 앤 리조트 SERENITY"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/vabien_logo.webp" alt="바비엥 호텔식 레지던스 VABIEN"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/pacific_logo.webp" alt="퍼시픽 블루 골프 앤 리조트 일본 PACIFIC BLUE"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/geojeview_logo.webp" alt="거제뷰 골프 앤 리조트 GEOJE VIEW"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/gasan_logo.webp" alt="가산노블리제CC 가산 노블리제 컨트리클럽 푸른솔 GASAN NOBLESSE CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/ocean_beach_logo.webp" alt="오션비치 골프 앤 리조트 OCEAN BEACH"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/easysky_logo.webp" alt="이지스카이CC 이지스카이 컨트리클럽 EASY SKY CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/spark_resort_logo.webp" alt="에스파크 골프 앤 리조트 밀양 SPARK"></a>
+        <!-- duplicate for seamless loop -->
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/lotte_resort_logo.svg" alt="롯데리조트 부여 속초 LOTTE RESORT"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/jinjucc_logo.png" alt="진주CC 진주 컨트리클럽 JINJU CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/conrad_logo.webp" alt="콘래드 서울 호텔 CONRAD SEOUL"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/lakai_logo.webp" alt="라카이 샌드파인 리조트 통영 LAKAI SANDPINE"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/arista_logo.png" alt="아리스타CC 아리스타 컨트리클럽 ARISTA CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/siena_logo.webp" alt="더 시에나 골프 앤 리조트 제주 THE SIENA"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/vista_logo.png" alt="비스타 워커힐 서울 VISTA WALKERHILL"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/skyviewcc_logo.png" alt="스카이뷰CC 스카이뷰 컨트리클럽 함양 SKY VIEW CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/resome_logo.webp" alt="리솜 호반 호텔 앤 리조트 RESOM"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/signiel_logo.svg" alt="시그니엘 서울 부산 호텔 SIGNIEL"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/podocc_logo.webp" alt="포도CC 포도 컨트리클럽 PODO CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/haeundae_beach_logo.webp" alt="해운대 비치 골프 앤 리조트 부산 HAEUNDAE BEACH"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/golfzone_logo.webp" alt="골프존 조이마루 GOLFZON ZOIMARU"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/josun_logo.webp" alt="그랜드 조선 부산 호텔 GRAND JOSUN"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/easthill_logo.png" alt="이스트힐CC 이스트힐 컨트리클럽 EAST HILL CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/serenity_logo.webp" alt="세레니티 골프 앤 리조트 SERENITY"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/vabien_logo.webp" alt="바비엥 호텔식 레지던스 VABIEN"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/pacific_logo.webp" alt="퍼시픽 블루 골프 앤 리조트 일본 PACIFIC BLUE"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/geojeview_logo.webp" alt="거제뷰 골프 앤 리조트 GEOJE VIEW"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/gasan_logo.webp" alt="가산노블리제CC 가산 노블리제 컨트리클럽 푸른솔 GASAN NOBLESSE CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/ocean_beach_logo.webp" alt="오션비치 골프 앤 리조트 OCEAN BEACH"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/easysky_logo.webp" alt="이지스카이CC 이지스카이 컨트리클럽 EASY SKY CC"></a>
+        <a class="trust-logo" href="client.html"><img src="assets/images/clients/spark_resort_logo.webp" alt="에스파크 골프 앤 리조트 밀양 SPARK"></a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Why CU Leisure</span>
+            <h2>같은 문제라도,<br>누가 다루느냐에 따라<br>결과는 달라집니다.</h2>
+          </div>
+          <p>2009년 글로벌 금융위기부터 분양 정체, 구조 재편, 정상화까지. 씨유레저는 현장에서 반복되는 문제를 오랫동안 직접 다뤄왔습니다.</p>
+        </div>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <span class="kicker">New Project</span>
+            <h3>좋은 사업지인데,<br>이 방향이 맞는 걸까요?</h3>
+            <p>사업성은 있어 보이지만 상품 구조와 분양 전략이 제대로 설계되어 있는지 확신이 없습니다. 초기 방향이 틀리면 이후 모든 과정이 흔들릴 수 있습니다.</p>
+          </div>
+          <div class="pain-card">
+            <span class="kicker">Sales Stagnation</span>
+            <h3>분양은 시작했는데,<br>생각처럼 움직이지 않습니다</h3>
+            <p>마케팅과 영업은 진행되고 있지만 실제 계약으로 이어지지 않는 상황. 이럴 때는 광고보다 사업 구조와 타깃 설정을 먼저 다시 봐야 합니다.</p>
+          </div>
+          <div class="pain-card">
+            <span class="kicker">Partnership</span>
+            <h3>지금 파트너 선택이,<br>맞는 결정이었을까요?</h3>
+            <p>사업이 길어질수록 파트너의 역할과 책임은 더 중요해집니다. 끝까지 함께 갈 수 있는 조직인지, 다시 고민하게 되는 순간이 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="performance-stats">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Real Cases</span>
+            <h2>현장에서 증명해왔습니다</h2>
+          </div>
+          <p>처음 시작부터 끝으로 가는 그 순간까지, 겉으로는 정상적으로 보이지만 실제로는 구조적인 문제가 숨어 있는 경우가 많습니다. 씨유레저는 이러한 상황을 현장에서 반복적으로 해결해왔습니다.</p>
+        </div>
+        <div class="case-grid">
+          <div class="case-card" onclick="openModal('case1')">
+            <div class="case-num">Case 01</div>
+            <h3>분양 직전,<br>사업이 멈출 뻔한 이유</h3>
+            <p>공사 직전, 별다른 검토 없이 진행될 뻔한 사업지. 문제는 시작 전에 이미 정해져 있었습니다.</p>
+            <div class="case-result">→ 법률 검토 및 구조 재설계 후 정상 진행</div>
+          </div>
+          <div class="case-card" onclick="openModal('case2')">
+            <div class="case-num">Case 02</div>
+            <h3>광고는 계속되는데,<br>계약이 나오지 않던 이유</h3>
+            <p>마케팅 비용은 쏟아지는데, 계약 성과는 나오지 않는 현장. 문제는 광고가 아니었습니다.</p>
+            <div class="case-result">→ 함양 스카이뷰 완판 / 롯데리조트 부여 완판</div>
+          </div>
+          <div class="case-card" onclick="openModal('case3')">
+            <div class="case-num">Case 03</div>
+            <h3>이미 멈춘 사업이<br>다시 움직이기 시작한 순간</h3>
+            <p>이해관계가 얽혀 멈춘 현장. 아무도 먼저 움직이지 못하는 상황이었습니다.</p>
+            <div class="case-result">→ 동의서 징구 및 회생 완료 후 인수까지 진행</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Business Cycle</span>
+            <h2>사업은 단계가 아니라,<br>하나의 흐름입니다.</h2>
+            <p style="color:var(--muted); max-width:560px; font-size:16px; line-height:1.75; margin-top:14px;">사업지 발굴부터 기획, 분양, 운영, 그리고 마지막으로 법정관리·회생·인수까지. 씨유레저는 프로젝트의 전 과정을 하나의 흐름으로 수행합니다.</p>
+          </div>
+          <a href="solution.html" class="view-all">전체 솔루션 보기 →</a>
+        </div>
+        <div class="solution-grid">
+          <div class="solution-card feature">
+            <div class="solution-num">01</div>
+            <h3>사업지 발굴</h3>
+            <p>입지·구조·수익성·추진 가능성을 냉정하게 검토하고, 상품 구조와 분양 전략까지 프로젝트의 기본 설계를 만듭니다. 좋은 사업지인지보다, 실제로 움직일 수 있는 사업지인지 먼저 봅니다.</p>
+          </div>
+          <div class="solution-card">
+            <div class="solution-num">02</div>
+            <h3>기획</h3>
+            <p>상품 구조·타깃·가격 전략·마케팅 방향을 프로젝트에 맞게 설계합니다.</p>
+          </div>
+          <div class="solution-card">
+            <div class="solution-num">03</div>
+            <h3>분양</h3>
+            <p>25만 고객 DB와 현장 영업 조직을 활용해 정체되지 않는 분양 구조를 만듭니다.</p>
+          </div>
+          <div class="solution-card">
+            <div class="solution-num">04</div>
+            <h3>운영</h3>
+            <p>회원 관리, 운영 안정화, 사후 시스템 정착까지 장기 구조를 설계합니다.</p>
+          </div>
+          <div class="solution-card">
+            <div class="solution-num">05</div>
+            <h3>법정관리 · 회생 · 인수</h3>
+            <p>필요한 경우 구조 재정비, 이해관계 조율, 정상화 단계까지 실무적으로 연결합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Portfolio</span>
+            <h2>단순한 실적이 아닌,<br>기적 같은 정상화의 기록</h2>
+          </div>
+          <a href="portfolio.html" class="view-all">전체 레퍼런스 보기 →</a>
+        </div>
+        <div class="grid-3">
+          <a href="portfolio.html" class="card portfolio-card">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/lotte_buyeo.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Resort</span>
+              <h3>롯데리조트 부여 · 속초</h3>
+              <p>런칭부터 분양, 운영 안정화까지 대규모 프로젝트의 전체 사이클을 수행한 대표 레퍼런스.</p>
+              <div class="meta-item"><strong>Result</strong><span>목표 물량 100% 완판</span></div>
+            </div>
+          </a>
+          <a href="portfolio.html" class="card portfolio-card">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/thesiena.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Golf &amp; Membership</span>
+              <h3>더 시에나 골프 앤 리조트</h3>
+              <p>보수적인 하이엔드 시장에서 프라이빗 세일즈 중심으로 결과를 만든 대표 사례.</p>
+              <div class="meta-item"><strong>Result</strong><span>회원모집 관련 전체 PM 성공적 진행</span></div>
+            </div>
+          </a>
+          <a href="portfolio.html" class="card portfolio-card">
+            <div class="portfolio-image" style="background-image:url('assets/images/portfolio/Port_hoban.webp');"></div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Recovery</span>
+              <h3>호반 호텔 앤 리조트</h3>
+              <p>회생 및 사업지 정리 프로젝트. 법정관리와 복잡한 채권/채무 관계. 타사가 포기한 프로젝트를 인수하여 기적적인 정상화를 이뤄냈습니다.</p>
+              <div class="meta-item"><strong>Result</strong><span>까다로운 동의서 징구 및 법적 회생 절차 전면 대행으로 실패한 현장을 완전한 성공의 무대로 전환</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="client-logos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Client</span>
+            <h2>여러 사업지가<br>씨유레저와 함께 움직였습니다.</h2>
+          </div>
+          <p>특정 업종 하나에 머무르지 않고 골프장, 리조트, 호텔, 멤버십 사업 전반에서 축적된 프로젝트 경험을 보유하고 있습니다.</p>
+        </div>
+        <div class="marquee-wrap">
+          <div class="marquee-track">
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/siena_logo.webp" alt="더 시에나 골프 앤 리조트 제주 THE SIENA"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/lotte_resort_logo.svg" alt="롯데리조트 부여 속초 LOTTE RESORT"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/lakai_logo.webp" alt="라카이 샌드파인 리조트 통영 LAKAI SANDPINE"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/resome_logo.webp" alt="리솜 호반 호텔 앤 리조트 RESOM"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/haeundae_beach_logo.webp" alt="해운대 비치 골프 앤 리조트 부산 HAEUNDAE BEACH"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/ocean_beach_logo.webp" alt="오션비치 골프 앤 리조트 OCEAN BEACH"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/geojeview_logo.webp" alt="거제뷰 골프 앤 리조트 GEOJE VIEW"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/serenity_logo.webp" alt="세레니티 골프 앤 리조트 SERENITY"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/pacific_logo.webp" alt="퍼시픽 블루 골프 앤 리조트 일본 PACIFIC BLUE"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/skyviewcc_logo.png" alt="스카이뷰CC 스카이뷰 컨트리클럽 함양 SKY VIEW CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/easysky_logo.webp" alt="이지스카이CC 이지스카이 컨트리클럽 EASY SKY CC"></a>
+            <!-- duplicate for seamless loop -->
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/siena_logo.webp" alt="더 시에나 골프 앤 리조트 제주 THE SIENA"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/lotte_resort_logo.svg" alt="롯데리조트 부여 속초 LOTTE RESORT"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/lakai_logo.webp" alt="라카이 샌드파인 리조트 통영 LAKAI SANDPINE"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/resome_logo.webp" alt="리솜 호반 호텔 앤 리조트 RESOM"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/haeundae_beach_logo.webp" alt="해운대 비치 골프 앤 리조트 부산 HAEUNDAE BEACH"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/ocean_beach_logo.webp" alt="오션비치 골프 앤 리조트 OCEAN BEACH"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/geojeview_logo.webp" alt="거제뷰 골프 앤 리조트 GEOJE VIEW"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/serenity_logo.webp" alt="세레니티 골프 앤 리조트 SERENITY"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/pacific_logo.webp" alt="퍼시픽 블루 골프 앤 리조트 일본 PACIFIC BLUE"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/skyviewcc_logo.png" alt="스카이뷰CC 스카이뷰 컨트리클럽 함양 SKY VIEW CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/easysky_logo.webp" alt="이지스카이CC 이지스카이 컨트리클럽 EASY SKY CC"></a>
+          </div>
+          <div class="marquee-track reverse">
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/conrad_logo.webp" alt="콘래드 서울 호텔 CONRAD SEOUL"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/signiel_logo.svg" alt="시그니엘 서울 부산 호텔 SIGNIEL"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/vista_logo.png" alt="비스타 워커힐 서울 VISTA WALKERHILL"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/josun_logo.webp" alt="그랜드 조선 부산 호텔 GRAND JOSUN"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/golfzone_logo.webp" alt="골프존 조이마루 GOLFZON ZOIMARU"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/vabien_logo.webp" alt="바비엥 호텔식 레지던스 VABIEN"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/jinjucc_logo.png" alt="진주CC 진주 컨트리클럽 JINJU CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/easthill_logo.png" alt="이스트힐CC 이스트힐 컨트리클럽 EAST HILL CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/arista_logo.png" alt="아리스타CC 아리스타 컨트리클럽 ARISTA CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/podocc_logo.webp" alt="포도CC 포도 컨트리클럽 PODO CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/serenity_logo.webp" alt="세레니티 골프 앤 리조트 SERENITY"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/gasan_logo.webp" alt="가산노블리제CC 가산 노블리제 컨트리클럽 푸른솔 GASAN NOBLESSE CC"></a>
+            <!-- duplicate for seamless loop -->
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/conrad_logo.webp" alt="콘래드 서울 호텔 CONRAD SEOUL"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/signiel_logo.svg" alt="시그니엘 서울 부산 호텔 SIGNIEL"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/vista_logo.png" alt="비스타 워커힐 서울 VISTA WALKERHILL"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/josun_logo.webp" alt="그랜드 조선 부산 호텔 GRAND JOSUN"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/golfzone_logo.webp" alt="골프존 조이마루 GOLFZON ZOIMARU"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/vabien_logo.webp" alt="바비엥 호텔식 레지던스 VABIEN"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/jinjucc_logo.png" alt="진주CC 진주 컨트리클럽 JINJU CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/easthill_logo.png" alt="이스트힐CC 이스트힐 컨트리클럽 EAST HILL CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/arista_logo.png" alt="아리스타CC 아리스타 컨트리클럽 ARISTA CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/podocc_logo.webp" alt="포도CC 포도 컨트리클럽 PODO CC"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/serenity_logo.webp" alt="세레니티 골프 앤 리조트 SERENITY"></a>
+            <a class="client-logo" href="client.html"><img src="assets/images/clients/gasan_logo.webp" alt="가산노블리제CC 가산 노블리제 컨트리클럽 푸른솔 GASAN NOBLESSE CC"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Client Voices</span>
+            <h2>함께한 대표님들이<br>직접 전합니다</h2>
+          </div>
+        </div>
+
+        <div class="testi-grid">
+          <div class="testi-card">
+            <p class="testi-quote">"초기 분양이 완전히 멈춰버린 상황에서 씨유레저를 만났습니다. 몇 달 동안 해결하지 못했던 문제를, 현장 진입 두 달 만에 돌파구를 만들었습니다. 실력 있는 팀은 변명하지 않더군요."</p>
+            <div class="testi-author">
+              <span class="testi-name">리조트 개발사 대표이사</span>
+              <span class="testi-role">경남 리조트 분양 프로젝트</span>
+              <span class="testi-project">Resort · 분양 대행</span>
+            </div>
+          </div>
+          <div class="testi-card">
+            <p class="testi-quote">"광고 예산을 쏟아부어도 계약이 나오지 않았습니다. 씨유레저는 광고를 늘리는 대신 상품 구조 자체를 먼저 바꿨고, 시장이 반응하기 시작했습니다. 처음부터 이 팀과 함께했어야 했습니다."</p>
+            <div class="testi-author">
+              <span class="testi-name">골프장 운영사 경영기획실장</span>
+              <span class="testi-role">경기권 골프 멤버십 분양</span>
+              <span class="testi-project">Golf · 멤버십 분양</span>
+            </div>
+          </div>
+          <div class="testi-card">
+            <p class="testi-quote">"법정관리 상황에서 이해관계자가 수백 명이었습니다. 동의서 징구가 불가능하다고 모두가 말했을 때, 씨유레저 팀은 직접 전국을 돌았습니다. 3개월 만에 마무리됐을 때 우리도 믿기 어려웠습니다."</p>
+            <div class="testi-author">
+              <span class="testi-name">호텔 개발사 대표</span>
+              <span class="testi-role">법정관리 회생 프로젝트</span>
+              <span class="testi-project">Recovery · 회생 절차</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="insight-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Insight</span>
+            <h2>전문가 인사이트</h2>
+          </div>
+          <a href="insight.html" class="view-all">전체 보기 →</a>
+        </div>
+        <div class="grid-3" id="indexInsightPreview"></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <span class="eyebrow">Contact</span>
+            <h2>여러분의 사업지, 지금 검토가 필요하신가요?</h2>
+            <p>
+              단순한 분양 문의부터 복잡한 회생 및 정상화 상담까지. 18년 무사고의 씨유레저가 <br>가장 현실적이고 완벽한 해결책을 제시해 드립니다.
+            </p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="mailto:chaeumgnl@naver.com">이메일 문의</a>
+            <a class="btn btn-secondary" href="tel:0244498221">전화 문의</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-info-row">
+          <div class="footer-info-item footer-brand">
+            <strong>주식회사 씨유레저</strong>
+            <span>대표 채수용 | 사업자 220-87-89046</span>
+            <span>개인정보관리책임자 이요한</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>본사</strong>
+            <span>서울 강남구 봉은사로82길 9-5 2F,3F</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>영남지사</strong>
+            <span>울산광역시 북구 관문길 40, 3층</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>연락처</strong>
+            <span>02-449-8221</span>
+            <span>chaeumgnl@naver.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-line">
+        <span>© 2026 CU Leisure. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="insight.html">Insight</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modalOverlay" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" aria-label="닫기" onclick="forceCloseModal()">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    /* ── Hero Slideshow ── */
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots   = document.querySelectorAll('.hero-dot');
+    const heroCopy = document.getElementById('heroCopy');
+    let cur = 0, timer;
+
+    const slideData = [
+      {
+        eyebrow: "Your End-to-End Partner",
+        h1: "어떤 사업지든,<br>우리의 손에서<br><em>결과가 나옵니다</em>",
+        desc: "18년의 검증된 데이터와 실전 노하우로 레저 자산의 새로운 기준을 제시합니다.",
+        ctas: [
+          { text: "성공 레퍼런스", href: "portfolio.html", cls: "btn-primary" },
+          { text: "사업지 진단 받기", href: "contact.html", cls: "btn-outline" }
+        ],
+        cards: [
+          { label: "Professional", text: "분야별 최고의 전문가 그룹" },
+          { label: "Performance", text: "숫자로 증명하는<br>압도적 실적" },
+          { label: "Partnership", text: "대기업이 먼저 찾는<br>신뢰의 이름" }
+        ]
+      },
+      {
+        eyebrow: "Verified",
+        h1: "대한민국 상위 1% 오너들이<br>위기의 순간, 가장 먼저<br><em>씨유레저를 찾는 이유</em>",
+        desc: "치명적 리스크를 차단하고 사업의 뼈대부터 다시 세워야 한다면,<br>시장의 정답은 이미 정해져 있습니다.",
+        ctas: [
+          { text: "무료 사업지 정밀진단", href: "solution.html", cls: "btn-primary" },
+          { text: "오너들이 증명하는 추천사", href: "#testimonials", cls: "btn-outline" }
+        ],
+        cards: [
+          { label: "Risk Management", text: "리스크 차단" },
+          { label: "Finance", text: "금융권 신뢰 기획력" },
+          { label: "Analytics", text: "데이터 분석" }
+        ]
+      },
+      {
+        eyebrow: "Partnership",
+        h1: "까다로운 글로벌 브랜드가<br>수많은 대행사를 두고<br><em>씨유레저를 지목한 이유</em>",
+        desc: "롯데, 워커힐, 메리어트, 시에나 등 글로벌 리더들이 단발성 계약이 아닌<br>'라이프롱 파트너'로 우리를 선택했습니다.",
+        ctas: [
+          { text: "협력 파트너사 확인하기", href: "client.html", cls: "btn-primary" },
+          { text: "주요 프로젝트 실적보기", href: "#client-logos", cls: "btn-outline" }
+        ],
+        cards: [
+          { label: "Global Standard", text: "글로벌 스탠다드" },
+          { label: "Network", text: "VVIP 네트워크" },
+          { label: "Consulting", text: "통합 컨설팅 시너지" }
+        ]
+      },
+      {
+        eyebrow: "Results",
+        h1: "우리의 입이 아닌,<br>누구도 부정할 수 없는<br><em>'압도적인 숫자'가 실력을 증명합니다</em>",
+        desc: "결과가 확실하지 않다면 하이엔드 시장은 움직이지 않습니다.<br>우리가 시장을 장악한 3가지 절대 지표입니다.",
+        ctas: [
+          { text: "성공 레퍼런스 확인하기", href: "portfolio.html", cls: "btn-primary" },
+          { text: "18년 무사고 기록 증명", href: "#performance-stats", cls: "btn-outline" }
+        ],
+        cards: [
+          { label: "Zero Incidents", countUp: true, target: 18, suffix: "년", sub: "연속 금융사고 ZERO" },
+          { label: "VIP DB", countUp: true, target: 250000, suffix: "", sub: "프리미엄 고객" },
+          { label: "Execution", countUp: true, target: 100, suffix: "%", sub: "정상화 실행력" }
+        ]
+      },
+      {
+        eyebrow: "Execute",
+        h1: "당신의 사업지도,<br>이 성공의 기록들에<br><em>합류할 수 있습니다</em>",
+        desc: "시장을 주도하는 리더들은 이미 씨유레저의 시스템 안에서 움직이고 있습니다. 이제 귀사의 차례입니다.",
+        ctas: [
+          { text: "1:1 프로젝트 의뢰하기", href: "contact.html", cls: "btn-primary" },
+          { text: "전문가 인사이트 읽기", href: "#insight-section", cls: "btn-outline" }
+        ],
+        cards: [
+          { label: "Recovery", text: "위기 사업장 정상화" },
+          { label: "Investment", text: "프라이빗 자산 거래" },
+          { label: "Sales", text: "플랫폼 기반 영업망" }
+        ]
+      }
+    ];
+
+    function renderCardHtml(card) {
+      if (card.countUp) {
+        return `<div class="hero-card">
+          <strong>${card.label}</strong>
+          <span class="hero-card-value is-count hero-count" data-target="${card.target}" data-suffix="${card.suffix}">0${card.suffix}</span>
+          <small>${card.sub}</small>
+        </div>`;
+      }
+      const valClass = 'hero-card-value';
+      return `<div class="hero-card">
+        <strong>${card.label}</strong>
+        <span class="${valClass}">${card.text}</span>
+        ${card.sub ? `<small>${card.sub}</small>` : ''}
+      </div>`;
+    }
+
+    function runCountUp(el) {
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1500;
+      const startTime = performance.now();
+      function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(ease * target);
+        el.textContent = current.toLocaleString('ko-KR') + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    let isFirstRender = true;
+    let pendingRender = null;
+    function renderSlide(n) {
+      const d = slideData[n];
+      const cardsHtml = (d.cards || []).map(renderCardHtml).join('');
+      const ctaHtml = d.ctas.map(c =>
+        `<a class="btn ${c.cls}" href="${c.href}">${c.text}</a>`
+      ).join('');
+      function applyContent() {
+        heroCopy.innerHTML = `
+          <span class="eyebrow">${d.eyebrow}</span>
+          <h1>${d.h1}</h1>
+          <p class="hero-desc">${d.desc}</p>
+          <div class="hero-cards">${cardsHtml}</div>
+          <div class="hero-actions">${ctaHtml}</div>
+        `;
+        heroCopy.style.opacity = '';
+        heroCopy.classList.remove('animating', 'animating-right');
+        void heroCopy.offsetWidth;
+        heroCopy.classList.add(n === 0 ? 'animating' : 'animating-right');
+        const countEls = heroCopy.querySelectorAll('.hero-count');
+        if (countEls.length) {
+          setTimeout(() => countEls.forEach(runCountUp), 520);
+        }
+      }
+      if (isFirstRender) {
+        isFirstRender = false;
+        applyContent();
+      } else {
+        clearTimeout(pendingRender);
+        heroCopy.style.opacity = '0';
+        pendingRender = setTimeout(applyContent, 220);
+      }
+    }
+
+    function goSlide(n) {
+      slides[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      dots[cur].classList.add('active');
+      renderSlide(cur);
+      resetTimer();
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => goSlide(cur + 1), 8000);
+    }
+
+    renderSlide(0);
+    resetTimer();
+
+    document.getElementById('heroPrev').addEventListener('click', () => goSlide(cur - 1));
+    document.getElementById('heroNext').addEventListener('click', () => goSlide(cur + 1));
+
+    /* ── Modal ── */
+    const caseData = {
+      case1: {
+        num: "Case 01",
+        title: "분양 직전, 사업이 멈출 뻔한 이유",
+        blocks: [
+          { title: "상황", body: "공사를 앞두고 있던 사업지였습니다. 외형상으로는 문제없이 준비가 진행되는 것처럼 보였고, 일정대로라면 곧바로 공사에 들어갈 수 있는 상태였습니다. 하지만 씨유레저는 공사를 시작하기 전에, 이 사업이 실제로 끝까지 안전하게 갈 수 있는 구조인지부터 다시 점검했습니다." },
+          { title: "위험", body: "검토 과정에서 법률적 리스크가 그대로 남아 있다는 점이 확인됐습니다. 이 상태로 공사가 진행될 경우, 향후 분쟁으로 이어질 가능성이 높았고, 그 책임은 결국 시행사와 현장 운영 조직에 남게 되는 구조였습니다. 자칫 잘못하면 이도저도 못하는 상황에서 사업 전체가 흔들릴 수 있는 상황이었습니다." },
+          { title: "개입", body: "씨유레저는 먼저 법률 검토를 통해 구조적 문제를 선제적으로 찾아냈고, 그 결과를 바탕으로 사업 구조를 다시 설계했습니다. 사업이 가능한 구조인지, 이후 분양까지 무리 없이 이어질 수 있는지까지 검토한 뒤 방향을 바로잡았습니다." }
+        ],
+        result: "그 사업지는 현재 안정적으로 진행되고 있습니다. 법률 검토부터 구조 재설계, 분양 계획까지. 씨유레저가 사업의 전 과정을 함께하고 있습니다."
+      },
+      case2: {
+        num: "Case 02",
+        title: "광고는 계속되는데, 계약이 나오지 않던 이유",
+        blocks: [
+          { title: "상황", body: "시장 상황은 좋지 않았고, 기존 방식으로는 더 이상 계약을 만들기 어려운 시기였습니다. 함양 스카이뷰는 기존 대행사가 포기하고 떠난 악성 미분양 현장이었고, 롯데리조트 부여 역시 일반적인 접근으로는 쉽지 않은 대규모 분양 프로젝트였습니다. 겉으로 보기엔 '시장 자체가 안 좋다'는 말로 정리될 수 있는 상황이었습니다." },
+          { title: "위험", body: "광고를 집행해도 문의가 거의 없고, 기존의 상품 구성과 판매 방식으로는 계약 전환이 어려웠습니다. 시장이 안 좋은 것이기도 했지만, 더 큰 문제는 지금 구조로는 팔리기 어렵다는 점이었습니다. 이 상태가 계속되면 사업지는 장기 미분양에 빠지고, 시행사는 자금과 일정 모두에서 큰 부담을 안게 되는 상황이었습니다." },
+          { title: "개입", body: "씨유레저는 광고를 더 늘리는 대신, 팔리는 구조를 다시 만들었습니다. 함양 스카이뷰에서는 지역 수요를 분석해 주중 회원권을 활용한 새로운 전략을 설계했고, 롯데리조트 부여에서는 골프장 제휴를 직접 성사시키며 상품의 경쟁력을 다시 구성했습니다. 단순 노출이 아니라, 누가 왜 사야 하는지를 다시 정의한 뒤 현장 영업으로 연결했습니다." }
+        ],
+        result: "함양 스카이뷰는 기존 대행사가 포기했던 미분양 현장에서 완판에 성공했고, 롯데리조트 부여 역시 목표 물량 전량 분양을 완료했습니다. 시장이 아니라 방식의 문제였습니다. 씨유레저는 기획부터 실행까지 구조를 바꿔 결과를 만들어냈습니다."
+      },
+      case3: {
+        num: "Case 03",
+        title: "이미 멈춘 사업이 다시 움직이기 시작한 순간",
+        blocks: [
+          { title: "상황", body: "호반 호텔 앤 리조트 관련 프로젝트는 이미 법정관리 단계에 들어가 있었습니다. 이해관계자 간 신뢰는 무너져 있었고, 사업은 사실상 멈춰 있는 상태였습니다. 현장에는 불안과 피로감이 쌓여 있었고, 누구도 먼저 책임지고 움직이기 어려운 상황이었습니다." },
+          { title: "위험", body: "이 단계에서 가장 중요한 것은 동의서 징구였습니다. 동의서 징구가 이루어지지 않으면 회생 절차 자체가 앞으로 나아갈 수 없고, 결국 사업은 그대로 종료될 가능성이 높은 상태였습니다. 단순 자문이나 조언만으로는 해결될 수 없는, 실무와 설득이 동시에 필요한 국면이었습니다." },
+          { title: "개입", body: "씨유레저는 현장에 직접 들어가 동의서 징구를 진행했습니다. 이해관계자들을 설득하고, 복잡하게 얽힌 구조를 정리하며, 법정관리 이후 회생 절차가 실제로 진행될 수 있도록 실무를 수행했습니다. 그리고 그 과정을 회생에서 끝내지 않고, 최종적으로 인수 단계까지 연결해 사업이 다음 단계로 넘어갈 수 있는 기반을 만들었습니다." }
+        ],
+        result: "호반 호텔 앤 리조트 프로젝트는 법정관리 단계에서 동의서 징구를 거쳐 회생 절차를 완료했고, 최종적으로 인수까지 마무리되었습니다. 법정관리 → 동의서 징구 → 회생 → 인수. 씨유레저는 가장 어려운 구간에서 끝까지 실행한 조직이었습니다."
+      }
+    };
+
+    function openModal(id) {
+      const data = caseData[id];
+      if (!data) return;
+      document.getElementById("modalContent").innerHTML = `
+        <div class="modal-num">${data.num}</div>
+        <h2>${data.title}</h2>
+        ${data.blocks.map(b => `
+          <div class="modal-block">
+            <strong>${b.title}</strong>
+            <p>${b.body}</p>
+          </div>
+        `).join("")}
+        <div class="modal-result">
+          <strong>Result</strong>
+          <p>${data.result}</p>
+        </div>
+      `;
+      document.getElementById("modalOverlay").classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function forceCloseModal() {
+      document.getElementById("modalOverlay").classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    function closeModal(e) {
+      if (e.target.id === "modalOverlay") forceCloseModal();
+    }
+
+    document.addEventListener("keydown", e => { if (e.key === "Escape") forceCloseModal(); });
+  </script>
+
+<script src="common.js"></script>
+
+<script>
+  /* 인덱스 인사이트 프리뷰: CEO 인터뷰 고정 + 최신 2개 */
+  (function () {
+    const container = document.getElementById('indexInsightPreview');
+    if (!container || typeof POSTS === 'undefined') return;
+    const ceoPost = POSTS.find(p => p.slug === 'post-ceo-interview-2025');
+    const others = POSTS.filter(p => p.slug !== 'post-ceo-interview-2025').slice(0, 2);
+    const top3 = ceoPost ? [ceoPost, ...others] : POSTS.slice(0, 3);
+    container.innerHTML = top3.map(p => {
+      const imgPath = p.img.startsWith('../') ? p.img.substring(3) : p.img;
+      return `
+        <a href="posts/${p.slug}.html" class="card portfolio-card">
+          <div class="portfolio-image" style="background-image:url('${imgPath}');"></div>
+          <div class="portfolio-body">
+            <span class="portfolio-tag">${p.cat}</span>
+            <h3>${p.title}</h3>
+            <p>${p.desc}</p>
+          </div>
+        </a>`;
+    }).join('');
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cu-leisure.com/#organization",
+      "name": "씨유레저",
+      "alternateName": "CU Leisure",
+      "url": "https://cu-leisure.com/",
+      "logo": "https://cu-leisure.com/assets/logo/cu_favicon.png",
+      "foundingDate": "2009",
+      "description": "레저 자산의 기획·분양·운영·회생까지 End-to-End 솔루션을 제공하는 대한민국 레저 자산 전문기업. 18년 무사고 기록, 25만 VIP DB, 롯데·워커힐·메리어트 등 글로벌 파트너.",
+      "areaServed": "KR",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+82-2-449-8221",
+        "contactType": "customer service",
+        "email": "chaeumgnl@naver.com",
+        "availableLanguage": "Korean",
+        "hoursAvailable": "Mo-Fr 09:00-18:00"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cu-leisure.com/#website",
+      "url": "https://cu-leisure.com/",
+      "name": "씨유레저",
+      "alternateName": "CU Leisure",
+      "publisher": { "@id": "https://cu-leisure.com/#organization" },
+      "inLanguage": "ko-KR"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "씨유레저는 어떤 서비스를 제공하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "씨유레저는 레저 자산의 사업지 정밀진단, 분양 전략 수립, 법정관리 회생, VIP 영업망 운영, 위탁운영 및 M&A까지 End-to-End 솔루션을 제공합니다. 기획 단계부터 완판·정상화까지 전 과정을 책임집니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "씨유레저의 주요 실적은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "씨유레저는 18년 연속 금융사고 ZERO 기록을 보유하고 있으며, 25만 명의 프리미엄 VIP DB와 100% 정상화 실행력을 갖추고 있습니다. 롯데리조트, 워커힐, 메리어트, 더 시에나 등 국내외 주요 레저 기업과 장기 파트너십을 유지하고 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "미분양 사업지도 정상화가 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 씨유레저는 기존 대행사가 포기한 악성 미분양 현장에서도 완판 실적을 보유하고 있습니다. 함양 스카이뷰, 롯데리조트 부여 등 난이도 높은 사업지를 데이터 기반 전략으로 정상화한 경험이 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "법정관리 중인 사업지도 지원이 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 씨유레저는 법정관리 단계부터 동의서 징구, 회생 절차, 최종 인수까지 전 과정을 직접 실행한 실적이 있습니다. 이해관계자 설득부터 실무 수행까지 책임지며, 호반 호텔 앤 리조트 회생전환이 대표 사례입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "레저 자산 분양 컨설팅은 어떻게 문의하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "cu-leisure.com의 문의하기 페이지에서 사업지 정밀진단을 무료로 신청할 수 있습니다. 이메일 chaeumgnl@naver.com 또는 전화 02-449-8221(평일 09:00~18:00)로도 직접 문의 가능하며, 영업일 기준 24시간 이내에 답변드립니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "골프 회원권 분양과 일반 부동산 분양의 차이점은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "골프 회원권 분양은 실사용 가치와 희소성을 바탕으로 한 VIP 타깃 영업이 핵심입니다. 일반 광고보다 신뢰 기반의 1:1 영업망과 VVIP DB가 성패를 가릅니다. 씨유레저는 25만 프리미엄 DB와 현장 전문가 조직을 통해 골프 멤버십 분양을 전문적으로 수행합니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
+
+
+
