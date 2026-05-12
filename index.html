@@ -84,14 +84,19 @@
       background-size: cover; background-position: center;
       opacity: 0; transition: opacity 1.2s ease-in-out;
     }
-    .hero-slide.active { opacity: 1; animation: heroZoom 9s ease-out forwards; }
+    .hero-slide.active { opacity: 1; animation: heroZoom 9s ease-out forwards, heroFlash 1.8s ease-out forwards; filter: brightness(1.15) contrast(1.12) saturate(1.1); }
     @keyframes heroZoom {
       0%   { transform: scale(1); }
       100% { transform: scale(1.07); }
     }
+    @keyframes heroFlash {
+      0%   { filter: brightness(0.75) contrast(0.95) saturate(0.85); }
+      30%  { filter: brightness(1.45) contrast(1.20) saturate(1.25); }
+      100% { filter: brightness(1.15) contrast(1.12) saturate(1.1); }
+    }
     .hero-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(105deg, rgba(5,12,38,.88) 0%, rgba(5,12,38,.72) 50%, rgba(5,12,38,.45) 100%);
+      background: linear-gradient(105deg, rgba(5,12,38,.85) 0%, rgba(5,12,38,.15) 50%, rgba(5,12,38,0) 100%);
     }
     .hero-content { position: relative; z-index: 10; padding: 80px 0; width: 100%; }
     .hero-copy {
@@ -357,8 +362,6 @@
         <a class="trust-logo" href="client.html"><img src="assets/images/clients/geojeview_logo.webp" alt="거제뷰 골프 앤 리조트 GEOJE VIEW"></a>
         <a class="trust-logo" href="client.html"><img src="assets/images/clients/gasan_logo.webp" alt="가산노블리제CC 가산 노블리제 컨트리클럽 푸른솔 GASAN NOBLESSE CC"></a>
         <a class="trust-logo" href="client.html"><img src="assets/images/clients/ocean_beach_logo.webp" alt="오션비치 골프 앤 리조트 OCEAN BEACH"></a>
-        <a class="trust-logo" href="client.html"><img src="assets/images/clients/easysky_logo.webp" alt="이지스카이CC 이지스카이 컨트리클럽 EASY SKY CC"></a>
-        <a class="trust-logo" href="client.html"><img src="assets/images/clients/spark_resort_logo.webp" alt="에스파크 골프 앤 리조트 밀양 SPARK"></a>
         <!-- duplicate for seamless loop -->
         <a class="trust-logo" href="client.html"><img src="assets/images/clients/lotte_resort_logo.svg" alt="롯데리조트 부여 속초 LOTTE RESORT"></a>
         <a class="trust-logo" href="client.html"><img src="assets/images/clients/jinjucc_logo.png" alt="진주CC 진주 컨트리클럽 JINJU CC"></a>
@@ -381,8 +384,6 @@
         <a class="trust-logo" href="client.html"><img src="assets/images/clients/geojeview_logo.webp" alt="거제뷰 골프 앤 리조트 GEOJE VIEW"></a>
         <a class="trust-logo" href="client.html"><img src="assets/images/clients/gasan_logo.webp" alt="가산노블리제CC 가산 노블리제 컨트리클럽 푸른솔 GASAN NOBLESSE CC"></a>
         <a class="trust-logo" href="client.html"><img src="assets/images/clients/ocean_beach_logo.webp" alt="오션비치 골프 앤 리조트 OCEAN BEACH"></a>
-        <a class="trust-logo" href="client.html"><img src="assets/images/clients/easysky_logo.webp" alt="이지스카이CC 이지스카이 컨트리클럽 EASY SKY CC"></a>
-        <a class="trust-logo" href="client.html"><img src="assets/images/clients/spark_resort_logo.webp" alt="에스파크 골프 앤 리조트 밀양 SPARK"></a>
       </div>
     </section>
 
@@ -549,7 +550,6 @@
             <a class="client-logo" href="client.html"><img src="assets/images/clients/serenity_logo.webp" alt="세레니티 골프 앤 리조트 SERENITY"></a>
             <a class="client-logo" href="client.html"><img src="assets/images/clients/pacific_logo.webp" alt="퍼시픽 블루 골프 앤 리조트 일본 PACIFIC BLUE"></a>
             <a class="client-logo" href="client.html"><img src="assets/images/clients/skyviewcc_logo.png" alt="스카이뷰CC 스카이뷰 컨트리클럽 함양 SKY VIEW CC"></a>
-            <a class="client-logo" href="client.html"><img src="assets/images/clients/easysky_logo.webp" alt="이지스카이CC 이지스카이 컨트리클럽 EASY SKY CC"></a>
             <!-- duplicate for seamless loop -->
             <a class="client-logo" href="client.html"><img src="assets/images/clients/siena_logo.webp" alt="더 시에나 골프 앤 리조트 제주 THE SIENA"></a>
             <a class="client-logo" href="client.html"><img src="assets/images/clients/lotte_resort_logo.svg" alt="롯데리조트 부여 속초 LOTTE RESORT"></a>
@@ -561,7 +561,6 @@
             <a class="client-logo" href="client.html"><img src="assets/images/clients/serenity_logo.webp" alt="세레니티 골프 앤 리조트 SERENITY"></a>
             <a class="client-logo" href="client.html"><img src="assets/images/clients/pacific_logo.webp" alt="퍼시픽 블루 골프 앤 리조트 일본 PACIFIC BLUE"></a>
             <a class="client-logo" href="client.html"><img src="assets/images/clients/skyviewcc_logo.png" alt="스카이뷰CC 스카이뷰 컨트리클럽 함양 SKY VIEW CC"></a>
-            <a class="client-logo" href="client.html"><img src="assets/images/clients/easysky_logo.webp" alt="이지스카이CC 이지스카이 컨트리클럽 EASY SKY CC"></a>
           </div>
           <div class="marquee-track reverse">
             <a class="client-logo" href="client.html"><img src="assets/images/clients/conrad_logo.webp" alt="콘래드 서울 호텔 CONRAD SEOUL"></a>
