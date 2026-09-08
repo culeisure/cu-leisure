@@ -240,6 +240,7 @@ document.addEventListener('contextmenu', e => e.preventDefault());
 
 /* Posts metadata for related-posts widget */
 const POSTS = [
+  { slug: 'post-parkgolf-industry', title: '23만 명에서 멈춘 파크골프, 다음 성장은 민간에서 나온다', cat: '골프 산업', date: '2026.06.24', read: '7분', img: '../assets/images/posts/post-parkgolf-industry/post-parkgolf-industry_cover.webp', desc: '5년 만에 5배로 늘어난 파크골프 인구가 23만 명에서 멈췄다. 무료 공공 구장 모델의 한계와 민간 파크골프장, 회원모집 시장의 가능성을 짚는다.' },
   { slug: 'post-agency-selection', title: '회원권 분양대행사, 무엇을 보고 선택해야 하는가', cat: '분양 전략', date: '2026.05.04', read: '6분', img: '../assets/images/posts/post-agency-selection/post-agency-selection_cover.webp', desc: '분양대행사 선정에서 시행사가 점검해야 할 5가지 기준, 그리고 가장 결정적인 한 가지인 시행사 발급 실적증명서.' },
   { slug: 'post-2025-golf-stats', title: '2025년 골프장 내장객 4,641만 명, 비회원제의 약진과 회원제의 둔화', cat: '골프 산업', date: '2026.04.03', read: '6분', img: '../assets/images/posts/post-2025-golf-stats/post-2025-golf-stats_cover.webp', desc: '한국골프장경영협회 2025년 전국 골프장 이용 데이터 분석. 2년 연속 감소세 속 회원제·비회원제 격차 확대.' },
   { slug: 'post-five-step-method', title: '골프·리조트 회원모집의 성공 5단계, CU레저의 프로세스', cat: '분양 전략', date: '2026.03.07', read: '5분', img: '../assets/images/posts/post-five-step-method/post-five-step-method_cover.webp', desc: '시장조사부터 운영관리까지, CU레저가 회원모집 프로젝트를 진행하는 5단계 프로세스와 15곳 이상의 검증된 클라이언트.' },
