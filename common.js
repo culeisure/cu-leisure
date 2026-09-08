@@ -240,7 +240,7 @@ document.addEventListener('contextmenu', e => e.preventDefault());
 
 /* Posts metadata for related-posts widget */
 const POSTS = [
-  { slug: 'post-agency-selection', title: '회원권 분양대행사, 무엇을 보고 선택해야 하는가', cat: '분양 전략', date: '2026.05.04', read: '6분', img: '../assets/images/posts/post-agency-selection/post-agency-selection_cover.webp', desc: '분양대행사 선정에서 시행사가 점검해야 할 5가지 기준, 그리고 가장 결정적인 한 가지 — 시행사 발급 실적증명서.' },
+  { slug: 'post-agency-selection', title: '회원권 분양대행사, 무엇을 보고 선택해야 하는가', cat: '분양 전략', date: '2026.05.04', read: '6분', img: '../assets/images/posts/post-agency-selection/post-agency-selection_cover.webp', desc: '분양대행사 선정에서 시행사가 점검해야 할 5가지 기준, 그리고 가장 결정적인 한 가지인 시행사 발급 실적증명서.' },
   { slug: 'post-2025-golf-stats', title: '2025년 골프장 내장객 4,641만 명, 비회원제의 약진과 회원제의 둔화', cat: '골프 산업', date: '2026.04.03', read: '6분', img: '../assets/images/posts/post-2025-golf-stats/post-2025-golf-stats_cover.webp', desc: '한국골프장경영협회 2025년 전국 골프장 이용 데이터 분석. 2년 연속 감소세 속 회원제·비회원제 격차 확대.' },
   { slug: 'post-five-step-method', title: '골프·리조트 회원모집의 성공 5단계, CU레저의 프로세스', cat: '분양 전략', date: '2026.03.07', read: '5분', img: '../assets/images/posts/post-five-step-method/post-five-step-method_cover.webp', desc: '시장조사부터 운영관리까지, CU레저가 회원모집 프로젝트를 진행하는 5단계 프로세스와 15곳 이상의 검증된 클라이언트.' },
   { slug: 'post-2026-outlook', title: '2026년 골프·리조트 시장, "불황은 언제까지 이어질까?"', cat: '골프 산업', date: '2026.01.04', read: '7분', img: '../assets/images/posts/post-2026-outlook/post-2026-outlook_cover.webp', desc: '코로나 특수가 사라진 시장의 변곡점에서 콰이어트케이션·디지털 디톡스·올인클루시브가 새로운 키워드로 떠오른다.' },
@@ -255,7 +255,7 @@ const POSTS = [
   { slug: 'post-serenity', title: '세레니티CC & 리조트, 럭셔리와 자연이 공존하는 완벽한 휴식', cat: '골프 산업', date: '2025.02.15', read: '7분', img: '../assets/images/posts/post-serenity/post-serenity_cover.webp', desc: '그레이엄 마쉬 설계 27홀 코스와 건축가 김찬중의 리조트, KLPGA 투어 개최. 회원권 하나로 누리는 럭셔리 라이프스타일.' },
 ];
 
-/* Related posts injection on post pages — auto-random from POSTS */
+/* Related posts injection on post pages (auto-random from POSTS) */
 (function () {
   const isPost = location.pathname.includes('/posts/');
   if (!isPost) return;
