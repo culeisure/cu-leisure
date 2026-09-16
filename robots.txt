@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /_backup/
+Disallow: /flamingo/
 
 Sitemap: https://cu-leisure.com/sitemap.xml
