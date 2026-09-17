@@ -77,11 +77,15 @@
 
   /* 4) 전환 트래킹 (GA4 연결 시 gtag 사용) */
   (function () {
+    var SP = document.body.getAttribute("data-sp") || "";
+    var SPID = document.body.getAttribute("data-spid") || "";
     function sendEvent(name, params) {
       try {
-        if (typeof gtag === "function") gtag("event", name, params);
+        var p = Object.assign({ salesperson: SP, sp_id: SPID, site: "flamingo" }, params || {});
+        if (typeof gtag === "function") gtag("event", name, p);
       } catch (e) {}
     }
+    window.__flTrack = sendEvent;
     document.querySelectorAll("[data-track]").forEach(function (el) {
       el.addEventListener("click", function () {
         sendEvent(el.getAttribute("data-track"), {
@@ -99,6 +103,8 @@
         d.addEventListener("toggle", function () {
           if (!d.open) return;
           acc.querySelectorAll("details[open]").forEach(function (o) { if (o !== d) o.open = false; });
+          var q = d.querySelector("summary");
+          if (window.__flTrack) window.__flTrack("faq_open", { question: q ? q.textContent.trim().slice(0, 60) : "" });
         });
       });
     });
@@ -141,6 +147,7 @@
     }
     function open(i) {
       show(i);
+      if (window.__flTrack) window.__flTrack("photo_open", { photo: caption(imgs[(i + imgs.length) % imgs.length]) });
       lb.classList.add("is-on");
       document.documentElement.style.overflow = "hidden";
     }
@@ -179,7 +186,7 @@
     if (!cfg.endpoint) { leadBtn.style.display = "none"; return; }
     var leadBox = document.getElementById("leadBox");
     var leadForm = document.getElementById("leadForm");
-    function track(name, params) { try { if (typeof gtag === "function") gtag("event", name, params || {}); } catch (e) {} }
+    function track(name, params) { if (window.__flTrack) window.__flTrack(name, params); }
     if (cfg.sitekey) {
       var tw = document.getElementById("tsWidget");
       tw.className = "cf-turnstile";
