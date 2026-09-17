@@ -303,3 +303,25 @@ const POSTS = [
     inject();
   }
 })();
+
+// 이메일 주소를 스크립트로 조립해 수집기 노출을 줄인다 (2026-09-17)
+(function () {
+  function fill() {
+    document.querySelectorAll('[data-u][data-d]').forEach(function (el) {
+      var addr = el.getAttribute('data-u') + '@' + el.getAttribute('data-d');
+      if (el.tagName === 'A') {
+        el.setAttribute('href', 'mailto:' + addr);
+        if (/\[at\]/.test(el.textContent)) el.textContent = addr;
+      } else {
+        var a = document.createElement('a');
+        a.href = 'mailto:' + addr;
+        a.textContent = addr;
+        a.style.color = 'inherit';
+        a.style.textDecoration = 'none';
+        el.textContent = '';
+        el.appendChild(a);
+      }
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fill); else fill();
+})();
