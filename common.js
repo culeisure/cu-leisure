@@ -240,6 +240,8 @@ document.addEventListener('contextmenu', e => e.preventDefault());
 
 /* Posts metadata for related-posts widget */
 const POSTS = [
+  { slug: 'post-flamingo-kpga-2026', title: '개장 3년 플라밍고CC, 한 해에 KPGA 세 투어를 치른 코스', cat: '골프 산업', date: '2026.10.14', read: '6분', img: '../assets/images/posts/post-flamingo-kpga-2026/post-flamingo-kpga-2026_cover.webp', desc: '당진 플라밍고CC가 2026년 KPGA 챌린지투어, 챔피언스투어, 정규투어를 모두 치렀다. 선수들이 올해 최고 코스로 꼽은 이유.' },
+  { slug: 'post-illite-rainbow-membership', title: '영동 일라이트 골프앤리조트, 멤버십을 찾는 사람이 늘어나는 이유', cat: '분양 전략', date: '2026.09.22', read: '6분', img: '../assets/images/posts/post-illite-rainbow-membership/post-illite-rainbow-membership_cover.webp', desc: '충북 영동 레인보우 힐링관광지의 18홀 골프장과 호텔. 2027년 치유의 숲까지 더해지는 단지에 멤버십 문의가 이어지는 이유.' },
   { slug: 'post-cassia-sokcho-membership', title: '카시아 속초 오너스 멤버십, 바다 앞 객실을 회원권으로 갖는 새로운 방식', cat: '분양 전략', date: '2026.08.25', read: '7분', img: '../assets/images/posts/post-cassia-sokcho-membership/post-cassia-sokcho-membership_cover.webp', desc: '반얀그룹이 운영하는 속초 카시아의 오너스 멤버십. 연 30박 또는 20박, 3,000만 원대부터, 15년 시점 환매청구권의 의미를 짚는다.' },
   { slug: 'post-suseo-weekday-membership', title: '군위수서 주중이용권, 골프와 콘도를 한 장에 담은 상품의 계산법', cat: '분양 전략', date: '2026.08.11', read: '6분', img: '../assets/images/posts/post-suseo-weekday-membership/post-suseo-weekday-membership_cover.webp', desc: '대구 45분 군위수서골프앤리조트의 주중이용권 3종. 주중 그린피 6만 원과 콘도 연 2~4박을 묶은 구조가 올해 시장과 맞는 이유.' },
   { slug: 'post-2026-h1-review', title: '2026년 상반기 골프 시장 점검, 내장객은 돌아왔지만 치는 방식이 달라졌다', cat: '골프 산업', date: '2026.07.28', read: '7분', img: '../assets/images/posts/post-2026-h1-review/post-2026-h1-review_cover.webp', desc: '상반기 내장객 10% 증가에도 객단가는 하락. 2~3인 예약, 야간 라운드, 숙박 결합 골프여행 증가가 말하는 소비 방식의 변화.' },
